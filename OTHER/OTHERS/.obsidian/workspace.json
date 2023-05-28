@@ -1,0 +1,189 @@
+{
+  "main": {
+    "id": "48d83bc34bb3c9de",
+    "type": "split",
+    "children": [
+      {
+        "id": "c7c4cbe047432adf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b9c02adfd7052bb2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Compt Prog/CP.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ed93a8d8845206d7",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.3.4"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "12a7d06b812f9f52",
+    "type": "split",
+    "children": [
+      {
+        "id": "25f526b333ecac12",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a47f25bf646a22ce",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ddeee0a9d16a96e0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f40783bd8a14be12",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "351d3c022002dbb5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "34b0d4eedbbad798",
+    "type": "split",
+    "children": [
+      {
+        "id": "a1cbcc32150281de",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a18c46a27413bed1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Compt Prog/CP.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d8575c178fc3d261",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Compt Prog/CP.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "fd36ba4fd8d42ad9",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "eb5348736357e021",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Compt Prog/CP.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "ed93a8d8845206d7",
+  "lastOpenFiles": [
+    "Acads/Screenshot_20230506_014628.png",
+    "Compt Prog/CP.md",
+    "Compt Prog",
+    "Acads/Screenshot_20230506_010623.png",
+    "Acads/OOPS.md",
+    "Acads",
+    "Acads/DS exam.md",
+    "Acads/M1_L1.pdf",
+    "JAVA.md",
+    "Acads/M1_L3.pdf",
+    "Acads/M1_L2.pdf",
+    "Acads/Screenshot_20230506_011819.png",
+    "Acads/Screenshot_20230507_152556.png",
+    "Acads/Screenshot_20230506_034431.png",
+    "Acads/Screenshot_20230506_012730.png",
+    "Acads/Screenshot_20230506_011839.png",
+    "OOPS"
+  ]
+}
