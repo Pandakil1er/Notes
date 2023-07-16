@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b9c02adfd7052bb2",
+            "id": "49db529c91e7b490",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -18,19 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "ed93a8d8845206d7",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.3.4"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -166,13 +155,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ed93a8d8845206d7",
+  "active": "49db529c91e7b490",
   "lastOpenFiles": [
-    "Acads/Screenshot_20230506_014628.png",
+    "Python mooc.md",
+    "Acads/OOPS.md",
     "Compt Prog/CP.md",
+    "Acads/Screenshot_20230506_014628.png",
     "Compt Prog",
     "Acads/Screenshot_20230506_010623.png",
-    "Acads/OOPS.md",
     "Acads",
     "Acads/DS exam.md",
     "Acads/M1_L1.pdf",
