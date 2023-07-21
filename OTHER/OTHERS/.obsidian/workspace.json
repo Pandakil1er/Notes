@@ -4,18 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "c7c4cbe047432adf",
+        "id": "3110573f1e521782",
         "type": "tabs",
         "children": [
           {
-            "id": "49db529c91e7b490",
+            "id": "c7dc102f598fa9e1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf-annotator",
               "state": {
-                "file": "Compt Prog/CP.md",
-                "mode": "source",
-                "source": false
+                "file": "ComptProg/CPBOOKNOTES.md"
               }
             }
           }
@@ -77,7 +75,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "34b0d4eedbbad798",
@@ -93,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Compt Prog/CP.md",
+                "file": "ComptProg/CPBOOKNOTES.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Compt Prog/CP.md",
+                "file": "ComptProg/CPBOOKNOTES.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Compt Prog/CP.md"
+                "file": "ComptProg/CPBOOKNOTES.md"
               }
             }
           }
@@ -155,18 +154,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "49db529c91e7b490",
+  "active": "c7dc102f598fa9e1",
   "lastOpenFiles": [
     "Python mooc.md",
+    "JAVA.md",
+    "ComptProg/CPBOOKNOTES.md",
+    "ComptProg/CP-LUV.md",
+    "ComptProg/newbookc.pdf",
+    "ComptProg/The Book.md",
+    "CPBook.md",
+    "CPBOOKNOTE.md",
+    "Screenshot_20230717_035508.png",
     "Acads/OOPS.md",
-    "Compt Prog/CP.md",
     "Acads/Screenshot_20230506_014628.png",
-    "Compt Prog",
+    "ComptProg",
     "Acads/Screenshot_20230506_010623.png",
     "Acads",
     "Acads/DS exam.md",
     "Acads/M1_L1.pdf",
-    "JAVA.md",
     "Acads/M1_L3.pdf",
     "Acads/M1_L2.pdf",
     "Acads/Screenshot_20230506_011819.png",

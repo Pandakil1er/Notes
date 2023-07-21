@@ -1,0 +1,122 @@
+
+Progress 18
+
+
+
+# Basics CPP
+bits/stdc++
+ 
+![[Screenshot_20230717_035508.png]]
+
+operator precedences
+
+
+overflows 
+int 10e9
+long 10e18
+
+double and float have precision problem
+
+str.size
+
+getline(cin,str1)
+{if getline after cin then one line will be empty}
+
+
+s.pushback() is faster than adding in strings
+
+arrays
+global arrays need constant variable and initialized to 0;
+local limit of size = 1e5 order
+global limit of size = 1e7 order
+
+
+main return 0 as successful execution
+string is also passed by value
+pass by reference in cpp
+```
+addsix(int &n){}
+..
+..
+int main(){
+int a = 5;
+addsix(a);
+}
+```
+array is always passed as reference
+
+pointers in c
+
+
+
+# Basic CP
+
+## Basics
+timecomplexity 1e7 in 1 second
+
+modulus
+
+(a+b)%m = ((a%m)+(b%m))%m
+(a\*b)%m = ((a%m)\*(b%m))%m
+(a-b)%m = ((a%m)-(b%m)+m)%m
+(a/b)%m=((a%m)\*(b^-1)%m)%m
+ //{b^-1 is modular multiplicative inverse https://www.wikiwand.com/en/Modular_multiplicative_inversei}
+
+
+## Precomputation technique
+
+
+```
+const N = 1e7
+long long fact[N]
+..
+..
+int main(){
+fact[0]=fact[1]=1;
+for (int i=2;i<N;i++){
+fact[i]= i * fact[i-1]
+}
+
+int t
+while (t--){
+...
+...
+...
+}
+}
+```
+
+**Hashing**
+```
+const N = 1e7
+int hsh[N]
+..
+..
+int main(){
+int t;
+while (t--){
+for (int i=0;i<N;i++){
+cin >> temp;
+hsh[temp]++
+}
+...
+...
+}
+}
+
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+

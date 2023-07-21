@@ -6,6 +6,19 @@ postmessage
 event = message 
 
 ```
+//squareworker.js
+
+addEventListener("message", event => {
+  postMessage(event.data * event.data);
+});
+
+```
+
+```
+
+
+
+
 let squareWorker = new Worker("code/squareworker.js");
 squareWorker.addEventListener("message", event => {
   console.log("The worker responded:", event.data);
