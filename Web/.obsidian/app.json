@@ -1,4 +1,5 @@
 {
   "newFileLocation": "current",
-  "trashOption": "local"
+  "trashOption": "local",
+  "attachmentFolderPath": "/Attachments"
 }

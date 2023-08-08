@@ -26,3 +26,15 @@ https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_un
 13. svw,svh
 14. lvw,lvh
 15. dvw,wvh
+
+
+
+- Thinking in terms of text size? Ems / Rems
+    
+- Thinking of a child compared to a parent? Percentage
+    
+- Thinking in terms of the screen size? Vh Vw Vmin Vmax
+    
+- Thinking in terms of "this number is what i set and no relative changes affect it's value"? Px
+    
+- Thinking in terms of print dots? Pt

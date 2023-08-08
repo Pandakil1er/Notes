@@ -1,6 +1,32 @@
-**css**
-resize
+# HTML
+```
+<dl> tag
 
+
+
+<p>Cryptids of Cornwall:</p>
+
+<dl>
+    <dt>Beast of Bodmin</dt>
+    <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+    <dt>Morgawr</dt>
+    <dd>A sea serpent.</dd>
+
+    <dt>Owlman</dt>
+    <dd>A giant owl-like creature.</dd>
+</dl>
+
+
+<a href="#id"> for going to id on same page
+```
+
+
+
+
+# CSS
+resize
+curson : pointer
 
 backdrop-filter
 
@@ -27,11 +53,14 @@ body
 
 ```
 
+img and video
+img{
+object-fit : cover,fill,contain,none,scaledown
+}
 
 
 
-
-**js**
+# JS
 ...spread operator to turn nodelist to array.
 
 ```js
@@ -43,6 +72,6 @@ var toggleNav = function () { var that = this; console.log(that); // <nav> eleme
 
 query selector can select from any element not only from document
 
-**others**
+# Others
 scss,less ----- preprocessors
 tailwind,bootstrap ---- frameworks

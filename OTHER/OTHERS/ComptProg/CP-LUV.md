@@ -1,5 +1,5 @@
-
-Progress 18
+ 
+Progress 32
 
 
 
@@ -109,14 +109,62 @@ hsh[temp]++
 
 ```
 
+**Prefix Sum**
+1D/2D
 
 
+\_\_gcd(a,b)
 
 
+Recursion
+time complexity = no of function calls * complexity of each call
+
+ mergesort
+
+# STL
+
+**Pairs**
+pair<int,string> p;
+p = {2,"abc"}; or p = make_pair(9,"abc")
+**Vectors**
+```cpp
+vector<int> v;
+v.push_back(x);
+v.pop_back()
+v.size();
+v[i] to access a particular element
+vector<int> v2 = v;array m ese reference jata h pr vector m copy banti h
+vector should passed by reference if dont want to make copy (vector<int> &v)
+```
+
+**Iterators**
+```
+
+vector<int> :: iterator it = v.begin
+
+```
+\*it for value
+
+it+1 give next memory address value
+it++ give next iterator
+
+vector of pair
+\*it.first  can  be  it->first same as in sturctures in c
+
+**Range based loops**
+
+```
+for (int value : v){
+cout << value << " ";
+}
+//values are copied
 
 
+for (int &value : v){
+cout << value << " ";
+}
+//values are referenced
+```
 
-
-
-
-
+**auto keyword**
+auto it = v.begin()
