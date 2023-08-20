@@ -1,6 +1,6 @@
 
 
-# Basic
+## Basic
 ```sh
 npm create vite@latest my-first-react-app -- --template react
 ```
@@ -601,3 +601,64 @@ There are two `setPerson` calls in the above example, and from what we’ve le
 //state as a snapshot
 
 lifting state up
+
+## Effects
+
+
+when things render in useEffect
+```jsx
+useEffect(() => {
+  // This runs after every render
+});
+
+useEffect(() => {
+  // This runs only on mount (when the component appears)
+}, []);
+
+useEffect(() => {
+  // This runs on mount *and also* if either a or b have changed since the last render
+}, [a, b]);
+```
+
+```jsx
+useEffect(
+  () => {
+    // execute side effect
+    return () => {
+      // cleanup function on unmounting or re-running effect
+    }
+  },
+  // optional dependency array
+  [/* 0 or more entries */]
+)
+```
+
+if dependency array is empty then effect do not run on rerender
+if it is not present then then effect run on every rerender
+if dependencies then on dependencies change
+
+
+There is an interesting behaviour with this hook when we use non-primitive JavaScript data types as dependencies (e.g., arrays, objects, functions). With primitive values, such as numbers and strings, we can define a variable from another variable, and they will be the same:  
+
+```
+const a = 1
+const b = 1
+a === b
+// Output: true
+```
+
+But with non-primitive values, such as objects, this behaviour is not the same:  
+
+```
+{} === {}
+// Output: false
+```
+
+So we need to be very careful when using objects as dependencies, because even though they may look like unaltered data, they may not be so. Instead of using objects, we may want to use their properties as dependencies:  
+
+```
+useEffect(() => {
+        // Some code that uses the properties
+    }, [myObject.property1, myObject.property2]);
+```
+

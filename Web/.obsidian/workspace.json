@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "REACT/React.md",
+                "file": "Physical-Notebook-Notes-Port/Basic JS.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -106,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "REACT/React.md",
+                "file": "Physical-Notebook-Notes-Port/Basic JS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "REACT/React.md",
+                "file": "Physical-Notebook-Notes-Port/Basic JS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "REACT/React.md"
+                "file": "Physical-Notebook-Notes-Port/Basic JS.md"
               }
             }
           }
@@ -168,10 +169,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e71b370d8f90e436",
+  "active": "5f84666636105df4",
   "lastOpenFiles": [
-    "CSS RESET.md",
     "REACT/React.md",
+    "Physical-Notebook-Notes-Port/Basic JS.md",
+    "CSS RESET.md",
     "Untitled.md",
     "Intermediate HTML and CSS/CSS Units.md",
     "REACT",
@@ -208,7 +210,6 @@
     "Javascript/Untitled.canvas",
     "Physical-Notebook-Notes-Port/Basic web dev.md",
     "Attachments",
-    "Javascript/form validation using js.md",
     "Physical-Notebook-Notes-Port",
     "Advanced HTML&CSS",
     "Untitled.canvas",

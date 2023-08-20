@@ -21,9 +21,11 @@
             "id": "f74f0feec9827ab4",
             "type": "leaf",
             "state": {
-              "type": "pdf-annotator",
+              "type": "markdown",
               "state": {
-                "file": "ComptProg/CPBOOKNOTES.md"
+                "file": "ComptProg/CP-LUV.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -164,8 +166,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f74f0feec9827ab4",
+  "active": "a47f25bf646a22ce",
   "lastOpenFiles": [
+    "ComptProg/CPBOOKNOTES.md",
     "ComptProg/CP-LUV.md",
     "Python mooc.md",
     "MISSING SEM.md",
@@ -174,7 +177,6 @@
     "Pasted image 20230729021510.png",
     "Pasted image 20230729021450.png",
     "Pasted image 20230729021445.png",
-    "ComptProg/CPBOOKNOTES.md",
     "JAVA.md",
     "ComptProg/newbookc.pdf",
     "ComptProg/The Book.md",
