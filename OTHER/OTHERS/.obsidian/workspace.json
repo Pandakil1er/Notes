@@ -8,16 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "632ad028adc0cb4e",
-            "type": "leaf",
-            "state": {
-              "type": "pdf-annotator",
-              "state": {
-                "file": "ComptProg/CPBOOKNOTES.md"
-              }
-            }
-          },
-          {
             "id": "f74f0feec9827ab4",
             "type": "leaf",
             "state": {
@@ -29,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -104,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComptProg/CPBOOKNOTES.md",
+                "file": "ComptProg/CP-LUV.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComptProg/CPBOOKNOTES.md",
+                "file": "ComptProg/CP-LUV.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +133,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComptProg/CPBOOKNOTES.md"
+                "file": "ComptProg/CP-LUV.md"
+              }
+            }
+          },
+          {
+            "id": "0fb5f63db1125d9d",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
               }
             }
           }
@@ -166,34 +165,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a47f25bf646a22ce",
+  "active": "f74f0feec9827ab4",
   "lastOpenFiles": [
     "ComptProg/CPBOOKNOTES.md",
+    "ComptProg/Untitled.md",
+    "ComptProg/newbookc.pdf",
     "ComptProg/CP-LUV.md",
-    "Python mooc.md",
+    "JAVA.md",
     "MISSING SEM.md",
+    "Acads/DAA.md",
+    "Pasted image 20230915042227.png",
+    "Screenshot_20230915_041203.png",
+    "Screenshot_20230915_043008.png",
+    "Screenshot_20230915_033652.png",
+    "Screenshot_20230915_033303.png",
+    "Python mooc.md",
     "Pasted image 20230729022914.png",
     "Pasted image 20230729021828.png",
     "Pasted image 20230729021510.png",
     "Pasted image 20230729021450.png",
     "Pasted image 20230729021445.png",
-    "JAVA.md",
-    "ComptProg/newbookc.pdf",
     "ComptProg/The Book.md",
     "CPBook.md",
     "CPBOOKNOTE.md",
-    "Screenshot_20230717_035508.png",
     "Acads/OOPS.md",
-    "Acads/Screenshot_20230506_014628.png",
     "ComptProg",
-    "Acads/Screenshot_20230506_010623.png",
     "Acads",
     "Acads/DS exam.md",
     "Acads/M1_L1.pdf",
     "Acads/M1_L3.pdf",
     "Acads/M1_L2.pdf",
-    "Acads/Screenshot_20230506_011819.png",
-    "Acads/Screenshot_20230507_152556.png",
     "OOPS"
   ]
 }

@@ -883,3 +883,215 @@ annotation-target: ComptProg/newbookc.pdf
 >%%TAGS%%
 >
 ^zsk5h6nb2o
+
+
+>%%
+>```annotation-json
+>{"created":"2023-10-08T21:49:30.383Z","updated":"2023-10-08T21:49:30.383Z","document":{"title":"newbookc.pdf","link":[{"href":"urn:x-pdf:a37d3c066bae434ae0996e9fbfbcca24"},{"href":"vault:/ComptProg/newbookc.pdf"}],"documentFingerprint":"a37d3c066bae434ae0996e9fbfbcca24"},"uri":"vault:/ComptProg/newbookc.pdf","target":[{"source":"vault:/ComptProg/newbookc.pdf","selector":[{"type":"TextPositionSelector","start":60740,"end":60857},{"type":"TextQuoteSelector","exact":"Using equal_range, the code becomes shorter:auto r = equal_range(array, array+n, x);cout << r.second-r.first << \"\\n\";","prefix":"array+n, x);cout << b-a << \"\\n\";","suffix":"Finding the smallest solutionAn "}]}]}
+>```
+>%%
+>*%%PREFIX%%array+n, x);cout << b-a << "\n";%%HIGHLIGHT%% ==Using equal_range, the code becomes shorter:auto r = equal_range(array, array+n, x);cout << r.second-r.first << "\n";== %%POSTFIX%%Finding the smallest solutionAn*
+>%%LINK%%[[#^v1el5zrvnfk|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^v1el5zrvnfk
+
+
+>%%
+>```annotation-json
+>{"created":"2023-10-08T22:30:42.076Z","updated":"2023-10-08T22:30:42.076Z","document":{"title":"newbookc.pdf","link":[{"href":"urn:x-pdf:a37d3c066bae434ae0996e9fbfbcca24"},{"href":"vault:/ComptProg/newbookc.pdf"}],"documentFingerprint":"a37d3c066bae434ae0996e9fbfbcca24"},"uri":"vault:/ComptProg/newbookc.pdf","target":[{"source":"vault:/ComptProg/newbookc.pdf","selector":[{"type":"TextPositionSelector","start":85946,"end":86182},{"type":"TextQuoteSelector","exact":"void search(int y) {if (y == n) {count++;return;}for (int x = 0; x < n; x++) {if (column[x] || diag1[x+y] || diag2[x-y+n-1]) continue;column[x] = diag1[x+y] = diag2[x-y+n-1] = 1;search(y+1);column[x] = diag1[x+y] = diag2[x-y+n-1] = 0;}}","prefix":"can be implemented as follows:50","suffix":"The search begins by calling sea"}]}]}
+>```
+>%%
+>*%%PREFIX%%can be implemented as follows:50%%HIGHLIGHT%% ==void search(int y) {if (y == n) {count++;return;}for (int x = 0; x < n; x++) {if (column[x] || diag1[x+y] || diag2[x-y+n-1]) continue;column[x] = diag1[x+y] = diag2[x-y+n-1] = 1;search(y+1);column[x] = diag1[x+y] = diag2[x-y+n-1] = 0;}}== %%POSTFIX%%The search begins by calling sea*
+>%%LINK%%[[#^leim3uxwel|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^leim3uxwel
+
+
+>%%
+>```annotation-json
+>{"created":"2023-10-08T22:31:07.267Z","updated":"2023-10-08T22:31:07.267Z","document":{"title":"newbookc.pdf","link":[{"href":"urn:x-pdf:a37d3c066bae434ae0996e9fbfbcca24"},{"href":"vault:/ComptProg/newbookc.pdf"}],"documentFingerprint":"a37d3c066bae434ae0996e9fbfbcca24"},"uri":"vault:/ComptProg/newbookc.pdf","target":[{"source":"vault:/ComptProg/newbookc.pdf","selector":[{"type":"TextPositionSelector","start":87377,"end":87596},{"type":"TextQuoteSelector","exact":"We can often optimize backtracking by pruning the search tree. The idea is toadd ”intelligence” to the algorithm so that it will notice as soon as possible if apartial solution cannot be extended to a complete solution.","prefix":"ern computer1.Pruning the search","suffix":" Such optimizationscan have a tr"}]}]}
+>```
+>%%
+>*%%PREFIX%%ern computer1.Pruning the search%%HIGHLIGHT%% ==We can often optimize backtracking by pruning the search tree. The idea is toadd ”intelligence” to the algorithm so that it will notice as soon as possible if apartial solution cannot be extended to a complete solution.== %%POSTFIX%%Such optimizationscan have a tr*
+>%%LINK%%[[#^jiw1snh4sfd|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^jiw1snh4sfd
+
+
+>%%
+>```annotation-json
+>{"created":"2023-10-08T22:36:30.839Z","updated":"2023-10-08T22:36:30.839Z","document":{"title":"newbookc.pdf","link":[{"href":"urn:x-pdf:a37d3c066bae434ae0996e9fbfbcca24"},{"href":"vault:/ComptProg/newbookc.pdf"}],"documentFingerprint":"a37d3c066bae434ae0996e9fbfbcca24"},"uri":"vault:/ComptProg/newbookc.pdf","target":[{"source":"vault:/ComptProg/newbookc.pdf","selector":[{"type":"TextPositionSelector","start":91020,"end":91228},{"type":"TextQuoteSelector","exact":"Meet in the middle is a technique where the search space is divided into twoparts of about equal size. A separate search is performed for both of the parts,and finally the results of the searches are combined","prefix":"e search tree.Meet in the middle","suffix":".The technique can be used if th"}]}]}
+>```
+>%%
+>*%%PREFIX%%e search tree.Meet in the middle%%HIGHLIGHT%% ==Meet in the middle is a technique where the search space is divided into twoparts of about equal size. A separate search is performed for both of the parts,and finally the results of the searches are combined== %%POSTFIX%%.The technique can be used if th*
+>%%LINK%%[[#^s67o9wgwrbk|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^s67o9wgwrbk
+
+
+>%%
+>```annotation-json
+>{"created":"2023-10-08T22:36:39.358Z","updated":"2023-10-08T22:36:39.358Z","document":{"title":"newbookc.pdf","link":[{"href":"urn:x-pdf:a37d3c066bae434ae0996e9fbfbcca24"},{"href":"vault:/ComptProg/newbookc.pdf"}],"documentFingerprint":"a37d3c066bae434ae0996e9fbfbcca24"},"uri":"vault:/ComptProg/newbookc.pdf","target":[{"source":"vault:/ComptProg/newbookc.pdf","selector":[{"type":"TextPositionSelector","start":92327,"end":93156},{"type":"TextQuoteSelector","exact":"The idea is to divide the list into two lists A and B such that both lists containabout half of the numbers. The first search generates all subsets of A and storestheir sums to a list S A . Correspondingly, the second search creates a list SB fromB. After this, it suffices to check if it is possible to choose one element from S Aand another element from SB such that their sum is x. This is possible exactlywhen there is a way to form the sum x using the numbers of the original list.For example, suppose that the list is [2, 4, 5, 9] and x =15. First, we dividethe list into A =[2, 4] and B =[5, 9]. After this, we create lists S A =[0, 2, 4, 6]and SB =[0, 5, 9, 14]. In this case, the sum x =15 is possible to form, because S Acontains the sum 6, SB contains the sum 9, and 6 +9 =15. This corresponds tothe solution [2, 4, 9]","prefix":"E. Horowitz and S. Sahni [39].54","suffix":".We can implement the algorithm "}]}]}
+>```
+>%%
+>*%%PREFIX%%E. Horowitz and S. Sahni [39].54%%HIGHLIGHT%% ==The idea is to divide the list into two lists A and B such that both lists containabout half of the numbers. The first search generates all subsets of A and storestheir sums to a list S A . Correspondingly, the second search creates a list SB fromB. After this, it suffices to check if it is possible to choose one element from S Aand another element from SB such that their sum is x. This is possible exactlywhen there is a way to form the sum x using the numbers of the original list.For example, suppose that the list is [2, 4, 5, 9] and x =15. First, we dividethe list into A =[2, 4] and B =[5, 9]. After this, we create lists S A =[0, 2, 4, 6]and SB =[0, 5, 9, 14]. In this case, the sum x =15 is possible to form, because S Acontains the sum 6, SB contains the sum 9, and 6 +9 =15. This corresponds tothe solution [2, 4, 9]== %%POSTFIX%%.We can implement the algorithm*
+>%%LINK%%[[#^rdm400j5128|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^rdm400j5128
+
+
+>%%
+>```annotation-json
+>{"created":"2023-10-08T22:40:42.347Z","updated":"2023-10-08T22:40:42.347Z","document":{"title":"newbookc.pdf","link":[{"href":"urn:x-pdf:a37d3c066bae434ae0996e9fbfbcca24"},{"href":"vault:/ComptProg/newbookc.pdf"}],"documentFingerprint":"a37d3c066bae434ae0996e9fbfbcca24"},"uri":"vault:/ComptProg/newbookc.pdf","target":[{"source":"vault:/ComptProg/newbookc.pdf","selector":[{"type":"TextPositionSelector","start":96255,"end":96491},{"type":"TextQuoteSelector","exact":"We can prove that a greedy algorithm does not work by showing a counterex-ample where the algorithm gives a wrong answer. In this problem we can easilyfind a counterexample: if the coins are {1, 3, 4} and the target sum is 6, the greedy","prefix":"ily produce an optimal solution.","suffix":"algorithm produces the solution "}]}]}
+>```
+>%%
+>*%%PREFIX%%ily produce an optimal solution.%%HIGHLIGHT%% ==We can prove that a greedy algorithm does not work by showing a counterex-ample where the algorithm gives a wrong answer. In this problem we can easilyfind a counterexample: if the coins are {1, 3, 4} and the target sum is 6, the greedy== %%POSTFIX%%algorithm produces the solution*
+>%%LINK%%[[#^p50z1po501|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^p50z1po501
+
+
+>%%
+>```annotation-json
+>{"created":"2023-10-08T22:42:51.004Z","updated":"2023-10-08T22:42:51.004Z","document":{"title":"newbookc.pdf","link":[{"href":"urn:x-pdf:a37d3c066bae434ae0996e9fbfbcca24"},{"href":"vault:/ComptProg/newbookc.pdf"}],"documentFingerprint":"a37d3c066bae434ae0996e9fbfbcca24"},"uri":"vault:/ComptProg/newbookc.pdf","target":[{"source":"vault:/ComptProg/newbookc.pdf","selector":[{"type":"TextPositionSelector","start":96834,"end":97089},{"type":"TextQuoteSelector","exact":"Many scheduling problems can be solved using greedy algorithms. A classicproblem is as follows: Given n events with their starting and ending times, find aschedule that includes as many events as possible. It is not possible to select anevent partially. F","prefix":"es the correct answer.Scheduling","suffix":"or example, consider the followi"}]}]}
+>```
+>%%
+>*%%PREFIX%%es the correct answer.Scheduling%%HIGHLIGHT%% ==Many scheduling problems can be solved using greedy algorithms. A classicproblem is as follows: Given n events with their starting and ending times, find aschedule that includes as many events as possible. It is not possible to select anevent partially. F== %%POSTFIX%%or example, consider the followi*
+>%%LINK%%[[#^z495pco6pha|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^z495pco6pha
+
+
+>%%
+>```annotation-json
+>{"created":"2023-10-08T22:43:05.063Z","updated":"2023-10-08T22:43:05.063Z","document":{"title":"newbookc.pdf","link":[{"href":"urn:x-pdf:a37d3c066bae434ae0996e9fbfbcca24"},{"href":"vault:/ComptProg/newbookc.pdf"}],"documentFingerprint":"a37d3c066bae434ae0996e9fbfbcca24"},"uri":"vault:/ComptProg/newbookc.pdf","target":[{"source":"vault:/ComptProg/newbookc.pdf","selector":[{"type":"TextPositionSelector","start":96566,"end":96823},{"type":"TextQuoteSelector","exact":"It is not known if the general coin problem can be solved using any greedyalgorithm1. However, as we will see in Chapter 7, in some cases, the generalproblem can be efficiently solved using a dynamic programming algorithm thatalways gives the correct answer","prefix":"le the optimal solution is 3 +3.","suffix":".SchedulingMany scheduling probl"}]}]}
+>```
+>%%
+>*%%PREFIX%%le the optimal solution is 3 +3.%%HIGHLIGHT%% ==It is not known if the general coin problem can be solved using any greedyalgorithm1. However, as we will see in Chapter 7, in some cases, the generalproblem can be efficiently solved using a dynamic programming algorithm thatalways gives the correct answer== %%POSTFIX%%.SchedulingMany scheduling probl*
+>%%LINK%%[[#^3fnft4qdf0k|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^3fnft4qdf0k
+
+
+>%%
+>```annotation-json
+>{"created":"2023-10-08T22:46:50.073Z","updated":"2023-10-08T22:46:50.073Z","document":{"title":"newbookc.pdf","link":[{"href":"urn:x-pdf:a37d3c066bae434ae0996e9fbfbcca24"},{"href":"vault:/ComptProg/newbookc.pdf"}],"documentFingerprint":"a37d3c066bae434ae0996e9fbfbcca24"},"uri":"vault:/ComptProg/newbookc.pdf","target":[{"source":"vault:/ComptProg/newbookc.pdf","selector":[{"type":"TextPositionSelector","start":100951,"end":101156},{"type":"TextQuoteSelector","exact":"In the general case, the best choice for x is the median of the numbers, i.e., themiddle number after sorting. For example, the list [1, 2, 9, 2, 6] becomes [1, 2, 2, 6, 9]after sorting, so the median is 2","prefix":"+|2 −2|+|9 −2|+|2 −2|+|6 −2|=12.","suffix":".The median is an optimal choice"}]}]}
+>```
+>%%
+>*%%PREFIX%%+|2 −2|+|9 −2|+|2 −2|+|6 −2|=12.%%HIGHLIGHT%% ==In the general case, the best choice for x is the median of the numbers, i.e., themiddle number after sorting. For example, the list [1, 2, 9, 2, 6] becomes [1, 2, 2, 6, 9]after sorting, so the median is 2== %%POSTFIX%%.The median is an optimal choice*
+>%%LINK%%[[#^62gshwagb43|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^62gshwagb43
+
+
+>%%
+>```annotation-json
+>{"created":"2023-10-08T22:47:01.058Z","updated":"2023-10-08T22:47:01.058Z","document":{"title":"newbookc.pdf","link":[{"href":"urn:x-pdf:a37d3c066bae434ae0996e9fbfbcca24"},{"href":"vault:/ComptProg/newbookc.pdf"}],"documentFingerprint":"a37d3c066bae434ae0996e9fbfbcca24"},"uri":"vault:/ComptProg/newbookc.pdf","target":[{"source":"vault:/ComptProg/newbookc.pdf","selector":[{"type":"TextPositionSelector","start":101738,"end":101920},{"type":"TextQuoteSelector","exact":"n the general case, the best choice for x is the average of the numbers. In theexample the average is (1 +2 +9 +2 +6)/5 =4. This result can be derived bypresenting the sum as follows","prefix":"+(9 −4)2 +(2 −4)2 +(6 −4)2 =46.I","suffix":":nx2 −2x(a1 +a2 +···+an) +(a21 +"}]}]}
+>```
+>%%
+>*%%PREFIX%%+(9 −4)2 +(2 −4)2 +(6 −4)2 =46.I%%HIGHLIGHT%% ==n the general case, the best choice for x is the average of the numbers. In theexample the average is (1 +2 +9 +2 +6)/5 =4. This result can be derived bypresenting the sum as follows== %%POSTFIX%%:nx2 −2x(a1 +a2 +···+an) +(a21 +*
+>%%LINK%%[[#^3qgpdrqv72a|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^3qgpdrqv72a
+
+
+>%%
+>```annotation-json
+>{"created":"2023-10-08T22:51:10.611Z","updated":"2023-10-08T22:51:10.611Z","document":{"title":"newbookc.pdf","link":[{"href":"urn:x-pdf:a37d3c066bae434ae0996e9fbfbcca24"},{"href":"vault:/ComptProg/newbookc.pdf"}],"documentFingerprint":"a37d3c066bae434ae0996e9fbfbcca24"},"uri":"vault:/ComptProg/newbookc.pdf","target":[{"source":"vault:/ComptProg/newbookc.pdf","selector":[{"type":"TextPositionSelector","start":104011,"end":104391},{"type":"TextQuoteSelector","exact":"Huffman coding2 is a greedy algorithm that constructs an optimal code forcompressing a given string. The algorithm builds a binary tree based on thefrequencies of the characters in the string, and each character’s codeword can beread by following a path from the root to the corresponding node. A move to theleft corresponds to bit 0, and a move to the right corresponds to bit 1.","prefix":"B or the string C.Huffman coding","suffix":"Initially, each character of the"}]}]}
+>```
+>%%
+>*%%PREFIX%%B or the string C.Huffman coding%%HIGHLIGHT%% ==Huffman coding2 is a greedy algorithm that constructs an optimal code forcompressing a given string. The algorithm builds a binary tree based on thefrequencies of the characters in the string, and each character’s codeword can beread by following a path from the root to the corresponding node. A move to theleft corresponds to bit 0, and a move to the right corresponds to bit 1.== %%POSTFIX%%Initially, each character of the*
+>%%LINK%%[[#^5ocsqdcjdb3|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^5ocsqdcjdb3
+
+
+>%%
+>```annotation-json
+>{"created":"2023-10-08T22:57:00.263Z","updated":"2023-10-08T22:57:00.263Z","document":{"title":"newbookc.pdf","link":[{"href":"urn:x-pdf:a37d3c066bae434ae0996e9fbfbcca24"},{"href":"vault:/ComptProg/newbookc.pdf"}],"documentFingerprint":"a37d3c066bae434ae0996e9fbfbcca24"},"uri":"vault:/ComptProg/newbookc.pdf","target":[{"source":"vault:/ComptProg/newbookc.pdf","selector":[{"type":"TextPositionSelector","start":109928,"end":110274},{"type":"TextQuoteSelector","exact":"The idea of dynamic programming is to use memoization to efficiently calculatevalues of a recursive function. This means that the values of the function arestored in an array after calculating them. For each parameter, the value of thefunction is calculated recursively only once, and after this, the value can bedirectly retrieved from the array","prefix":"ed memoization.Using memoization","suffix":".In this problem, we use arraysb"}]}]}
+>```
+>%%
+>*%%PREFIX%%ed memoization.Using memoization%%HIGHLIGHT%% ==The idea of dynamic programming is to use memoization to efficiently calculatevalues of a recursive function. This means that the values of the function arestored in an array after calculating them. For each parameter, the value of thefunction is calculated recursively only once, and after this, the value can bedirectly retrieved from the array== %%POSTFIX%%.In this problem, we use arraysb*
+>%%LINK%%[[#^fn5oggde887|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^fn5oggde887
+
+
+>%%
+>```annotation-json
+>{"created":"2023-10-08T22:57:08.308Z","updated":"2023-10-08T22:57:08.308Z","document":{"title":"newbookc.pdf","link":[{"href":"urn:x-pdf:a37d3c066bae434ae0996e9fbfbcca24"},{"href":"vault:/ComptProg/newbookc.pdf"}],"documentFingerprint":"a37d3c066bae434ae0996e9fbfbcca24"},"uri":"vault:/ComptProg/newbookc.pdf","target":[{"source":"vault:/ComptProg/newbookc.pdf","selector":[{"type":"TextPositionSelector","start":108215,"end":108802},{"type":"TextQuoteSelector","exact":"he essential property of solve is that its values can be recursively calculatedfrom its smaller values. The idea is to focus on the first coin that we choose forthe sum. For example, in the above scenario, the first coin can be either 1, 3or 4. If we first choose coin 1, the remaining task is to form the sum 9 usingthe minimum number of coins, which is a subproblem of the original problem.Of course, the same applies to coins 3 and 4. Thus, we can use the followingrecursive formula to calculate the minimum number of coins:solve(x) =min(solve(x −1) +1,solve(x −3) +1,solve(x −4) +1).","prefix":"ptimal solution is 3 +3 +4 =10.T","suffix":"The base case of the recursion i"}]}]}
+>```
+>%%
+>*%%PREFIX%%ptimal solution is 3 +3 +4 =10.T%%HIGHLIGHT%% ==he essential property of solve is that its values can be recursively calculatedfrom its smaller values. The idea is to focus on the first coin that we choose forthe sum. For example, in the above scenario, the first coin can be either 1, 3or 4. If we first choose coin 1, the remaining task is to form the sum 9 usingthe minimum number of coins, which is a subproblem of the original problem.Of course, the same applies to coins 3 and 4. Thus, we can use the followingrecursive formula to calculate the minimum number of coins:solve(x) =min(solve(x −1) +1,solve(x −3) +1,solve(x −4) +1).== %%POSTFIX%%The base case of the recursion i*
+>%%LINK%%[[#^nv3zdfdrqfh|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^nv3zdfdrqfh
+
+
+>%%
+>```annotation-json
+>{"created":"2023-10-08T23:31:16.376Z","text":"do this too \npage 71","updated":"2023-10-08T23:31:16.376Z","document":{"title":"newbookc.pdf","link":[{"href":"urn:x-pdf:a37d3c066bae434ae0996e9fbfbcca24"},{"href":"vault:/ComptProg/newbookc.pdf"}],"documentFingerprint":"a37d3c066bae434ae0996e9fbfbcca24"},"uri":"vault:/ComptProg/newbookc.pdf"}
+>```
+>%%
+>*%%PREFIX%%%%HIGHLIGHT%% ==== %%POSTFIX%%*
+>%%LINK%%[[#^h4iy3kwj5gq|show annotation]]
+>%%COMMENT%%
+>do this too 
+>page 71
+>%%TAGS%%
+>
+^h4iy3kwj5gq
+
+
+>%%
+>```annotation-json
+>{"created":"2023-10-08T23:31:52.719Z","text":"do this\npage 79","updated":"2023-10-08T23:31:52.719Z","document":{"title":"newbookc.pdf","link":[{"href":"urn:x-pdf:a37d3c066bae434ae0996e9fbfbcca24"},{"href":"vault:/ComptProg/newbookc.pdf"}],"documentFingerprint":"a37d3c066bae434ae0996e9fbfbcca24"},"uri":"vault:/ComptProg/newbookc.pdf"}
+>```
+>%%
+>*%%PREFIX%%%%HIGHLIGHT%% ==== %%POSTFIX%%*
+>%%LINK%%[[#^v2narsfyegn|show annotation]]
+>%%COMMENT%%
+>do this
+>page 79
+>%%TAGS%%
+>
+^v2narsfyegn

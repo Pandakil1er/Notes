@@ -167,7 +167,48 @@ class LoginForm extends React.Component {
 
 
 
+```jsx
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from "./App";
+import Profile from "./Profile";
+import ErrorPage from "./ErrorPage";
 
+const Router = () => {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <App />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "profile/:name",
+      element: <Profile />,
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
+};
+
+export default Router;
+```
+
+
+```jsx
+import { Link } from "react-router-dom";
+
+const ErrorPage = () => {
+  return (
+    <div>
+      <h1>Oh no, this route doesn't exist!</h1>
+      <Link to="/">
+        You can go back to the home page by clicking here, though!
+      </Link>
+    </div>
+  );
+};
+
+export default ErrorPage;
+```
 
 https://reactrouter.com/en/main/start/overview
 
