@@ -132,6 +132,11 @@ vector<int> v;
 v.push_back(x);
 v.pop_back()
 v.size();
+v.capacity();
+v.clear();
+v.front();
+v.back();
+v.empty();
 v[i] to access a particular element
 vector<int> v2 = v;array m ese reference jata h pr vector m copy banti h
 vector should passed by reference if dont want to make copy (vector<int> &v)
@@ -168,3 +173,88 @@ cout << value << " ";
 
 **auto keyword**
 auto it = v.begin()
+
+
+```cpp
+//deque
+deque<int> d;
+d.push_back(2);
+d.push_front(3);
+d.pop_back();
+d.at(1);
+d.front();
+d.erase(d.begin(),d.begin()+1)
+
+
+
+
+
+
+
+//List
+list<int> l;
+l.push_back(2);
+l.push_front(2);
+list<int> n(5,100);
+l.erase(l.begin());
+l.size();
+
+
+
+//stack
+stack<string> s;
+s.push("hi");
+s.push("hello");
+s.pop();
+s.top();
+s.size();
+s.empty();
+
+
+
+//queue
+queue<string> s;
+s.push("hi");
+s.pop();
+s.size();
+s.pop();
+
+////
+//priority queue
+
+//max heap
+priority_queue<int> maxi;
+maxi.push(3);
+maxi.push(1);
+maxi.top();
+max.size();
+maxi.pop();
+
+//min heap
+priority_queue<int,vector<int>,greater<int>> mini;
+////
+
+
+
+//set
+set<int> s;
+s.insert(5);
+s.insert(4);
+s.insert(4);
+
+
+map
+
+
+
+
+
+
+/////Algorithm
+binary_search(v.begin(),v.end(),6);
+lower_bound(v.begin(),v.end(),5) - v.begin();
+max(a,b);
+min(a,b);
+swap(a,b);
+ 
+```

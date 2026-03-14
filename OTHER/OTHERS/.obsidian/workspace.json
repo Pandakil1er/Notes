@@ -13,13 +13,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ComptProg/CP-LUV.md",
+                "file": "System Design/System Design Interviews guide.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "System Design Interviews guide"
+            }
+          },
+          {
+            "id": "9dfa2b329b4ad4fb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DSA/basics.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "basics"
+            }
+          },
+          {
+            "id": "1216d38ad4591071",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "System Design/random trivia.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "random trivia"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -38,8 +69,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
-              }
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -54,7 +88,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -62,7 +98,9 @@
             "type": "leaf",
             "state": {
               "type": "starred",
-              "state": {}
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "starred"
             }
           },
           {
@@ -70,7 +108,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -93,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ComptProg/CP-LUV.md",
+                "file": "ComptProg/cp31.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,7 +141,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for cp31"
             }
           },
           {
@@ -110,10 +152,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ComptProg/CP-LUV.md",
+                "file": "ComptProg/cp31.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from cp31"
             }
           },
           {
@@ -123,8 +167,12 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
-              }
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -133,8 +181,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ComptProg/CP-LUV.md"
-              }
+                "file": "ComptProg/cp31.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of cp31"
             }
           },
           {
@@ -143,8 +196,12 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
-              }
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
             }
           }
         ],
@@ -157,6 +214,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -165,36 +223,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f74f0feec9827ab4",
+  "active": "1216d38ad4591071",
   "lastOpenFiles": [
-    "ComptProg/CPBOOKNOTES.md",
-    "ComptProg/Untitled.md",
-    "ComptProg/newbookc.pdf",
-    "ComptProg/CP-LUV.md",
-    "JAVA.md",
+    "System Design/book/Readme.md",
+    "System Design/random trivia.md",
+    "System Design/System Design Interviews guide.md",
+    "System Design/book/01. Scaling/Readme.md",
+    "System Design/book/01. Scaling/images/database-replication.png",
+    "System Design/book/01. Scaling/images/cdn.png",
+    "System Design/book/01. Scaling/images/stateless.png",
+    "System Design/book/01. Scaling/images/statefull.png",
+    "System Design/book/01. Scaling/images/message-queue.png",
+    "System Design/book/01. Scaling/images/load-balancer.png",
+    "System Design/book/01. Scaling/images/data-center.png",
+    "System Design/book/01. Scaling/images/horizontal-scaling.png",
+    "System Design/book/01. Scaling/images/cache.png",
+    "System Design/book/01. Scaling/images/database.png",
+    "System Design/book/02. Back Of the Envelope Estimation/Readme.md",
+    "System Design/book/03. System Design Framework/Readme.md",
+    "System Design/book/04. Rate Limiter/Readme.md",
+    "System Design/book/05. Consistent Hashing/Readme.md",
+    "System Design/book/06. Key-Value Store/Readme.md",
+    "System Design/book/07. Unique-Id Generator/Readme.md",
+    "System Design/book/08. URL Shortener/Readme.md",
+    "System Design/book/09. Web Crawler/Readme.md",
+    "System Design/book/10. Notification System/Readme.md",
+    "System Design/book/11. News Feed System/Readme.md",
+    "System Design/book/12. Chat System/Readme.md",
+    "System Design/book/13. Search Autocomplete/Readme.md",
+    "System Design/book/14. Youtube/Readme.md",
+    "System Design/book/15. Google Drive/Readme.md",
+    "System Design/book/16. Proximity Service/Readme.md",
+    "System Design/book/01. Scaling/images",
+    "System Design/book/01. Scaling",
+    "System Design/book/02. Back Of the Envelope Estimation/images",
+    "System Design/book/02. Back Of the Envelope Estimation",
+    "System Design/book/03. System Design Framework",
+    "System Design/book/04. Rate Limiter/images",
+    "System Design/book/04. Rate Limiter",
+    "System Design/book/05. Consistent Hashing/images",
+    "System Design/book/05. Consistent Hashing",
+    "System Design/book/06. Key-Value Store/images",
+    "DSA/Strivers.md",
+    "DSA/Grokking.md",
+    "DSA/basics.md",
+    "ComptProg/NEW arc.md",
+    "5Proj/Text Editor.md",
     "MISSING SEM.md",
-    "Acads/DAA.md",
-    "Pasted image 20230915042227.png",
-    "Screenshot_20230915_041203.png",
-    "Screenshot_20230915_043008.png",
-    "Screenshot_20230915_033652.png",
-    "Screenshot_20230915_033303.png",
-    "Python mooc.md",
-    "Pasted image 20230729022914.png",
-    "Pasted image 20230729021828.png",
-    "Pasted image 20230729021510.png",
-    "Pasted image 20230729021450.png",
-    "Pasted image 20230729021445.png",
-    "ComptProg/The Book.md",
-    "CPBook.md",
-    "CPBOOKNOTE.md",
-    "Acads/OOPS.md",
-    "ComptProg",
-    "Acads",
-    "Acads/DS exam.md",
-    "Acads/M1_L1.pdf",
-    "Acads/M1_L3.pdf",
-    "Acads/M1_L2.pdf",
-    "OOPS"
+    "ComptProg/CP-LUV.md"
   ]
 }
