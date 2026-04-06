@@ -6,7 +6,7 @@ Welcome to my digital garden 🌱
 
 ## 🧠 Vaults
 
-### 📁 [[OTHER]]
+### 📁 [[OTHERS]]
 
 General notes, experiments, and random learnings.
 
