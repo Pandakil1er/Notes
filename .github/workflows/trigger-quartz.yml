@@ -1,0 +1,17 @@
+name: Trigger Quartz Build
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Quartz repo
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.NOTES_SITE_SYNC }}
+          repository: Pandakil1er/notes-site
+          event-type: update-notes
