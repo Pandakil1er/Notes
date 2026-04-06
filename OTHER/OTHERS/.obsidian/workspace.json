@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "System Design/random trivia.md",
+                "file": "Portfolio/Things i Learned.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "random trivia"
+              "title": "Things i Learned"
             }
           }
         ],
@@ -225,10 +225,12 @@
   },
   "active": "1216d38ad4591071",
   "lastOpenFiles": [
-    "System Design/book/Readme.md",
-    "System Design/random trivia.md",
-    "System Design/System Design Interviews guide.md",
     "System Design/book/01. Scaling/Readme.md",
+    "Portfolio/Things i Learned.md",
+    "Portfolio",
+    "System Design/System Design Interviews guide.md",
+    "System Design/random trivia.md",
+    "System Design/book/Readme.md",
     "System Design/book/01. Scaling/images/database-replication.png",
     "System Design/book/01. Scaling/images/cdn.png",
     "System Design/book/01. Scaling/images/stateless.png",
@@ -263,13 +265,11 @@
     "System Design/book/04. Rate Limiter",
     "System Design/book/05. Consistent Hashing/images",
     "System Design/book/05. Consistent Hashing",
-    "System Design/book/06. Key-Value Store/images",
     "DSA/Strivers.md",
     "DSA/Grokking.md",
     "DSA/basics.md",
     "ComptProg/NEW arc.md",
     "5Proj/Text Editor.md",
-    "MISSING SEM.md",
-    "ComptProg/CP-LUV.md"
+    "MISSING SEM.md"
   ]
 }

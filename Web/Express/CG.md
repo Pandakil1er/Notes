@@ -1,0 +1,459 @@
+Here is a markdown checklist based on the content of your provided sources:
+
+### Computer Graphics Concepts Checklist
+
+- [ ] **2D Transformations**
+    - [ ] Translation
+    - [ ] Scaling
+    - [ ] Rotation
+    - [ ] Rotation around a point
+    - [ ] Scaling with respect to a point
+    - [ ] **Homogeneous Coordinates**
+        - [ ] Purpose and advantages
+        - [ ] Adding an extra coordinate
+        - [ ] Cartesian coordinates
+        - [ ] Representation of points and vectors
+    - [ ] **Transformation Matrices**
+        - [ ] Translation matrix
+        - [ ] Rotation matrix
+        - [ ] Scaling matrix
+    - [ ] **Inverse Transformations**
+    - [ ] **Combining Transformations**
+        - [ ] Order of transformations and non-commutativity of matrix multiplication
+- [ ] **OpenGL 2D Transformations**
+    - [ ] `glMultMatrix` function and column-major order of matrices
+    - [ ] Basic transformation functions: `glTranslate`, `glRotate`, `glScale`
+    - [ ] Transformation matrix stacks in OpenGL
+- [ ] **3D Modelling**
+    - [ ] Definition and types of 3D models:
+        - [ ] Wireframe
+            - [ ] Characteristics
+        - [ ] Surface
+            - [ ] Focus on outward appearance and illusion of volume
+            - [ ] Elaboration compared to wireframes
+        - [ ] Solid
+            - [ ] Definition
+            - [ ] Characteristics
+    - [ ] **Advantages of Solid Modelling**
+    - [ ] **Solid Object Definition**
+        - [ ] Boundary points
+        - [ ] Interior points
+        - [ ] Closure
+    - [ ] **Solid Model Representation Schemes**
+        - [ ] Sweep representations
+            - [ ] Usefulness
+            - [ ] Representation using 2D shape and a sweep
+            - [ ] Menu options for sweep representation with 2D primitives
+        - [ ] Boundary representations (B-reps)
+            - [ ] Description based on surface boundaries
+            - [ ] Approximation of curved faces
+            - [ ] Definition of 3D object by a closed 2D surface
+            - [ ] Types: primitive-based and freedom-based
+        - [ ] Spatial-partitioning representations
+            - [ ] Decomposition into adjoining, non-intersecting solids
+            - [ ] Variation in primitive type, size, position, parameterization, and orientation
+            - [ ] Binary Space Partitioning Trees (BSP)
+                - [ ] Similarity to octree encoding
+                - [ ] Division using planes at any position and orientation
+                - [ ] Usefulness for identifying visible surfaces
+                - [ ] Characteristics
+            - [ ] Octree representation
+                - [ ] Hierarchical tree structure
+                - [ ] Divide-and-conquer principle of binary subdivision
+                - [ ] Successive subdivision into quadrants
+                - [ ] Representation for storing information about object interiors
+                - [ ] Use of quad trees for speeding up 3D picking
+- [ ] **Display Devices**
+    - [ ] Definition
+    - [ ] Types: analog, digital, and others
+    - [ ] **Output Devices**
+        - [ ] Role
+        - [ ] Examples
+    - [ ] **Types of Output**
+        - [ ] Soft copy
+        - [ ] Hard copy
+        - [ ] Communications channel
+    - [ ] **Video Monitors (VDTs)**
+        - [ ] Image storage in video memory
+        - [ ] Diagonal measurement of monitor size
+    - [ ] **Pixels**
+        - [ ] Definition
+        - [ ] Resolution
+            - [ ] Web resolution
+            - [ ] Print resolution
+        - [ ] Characteristics
+    - [ ] **Raster (Bitmap) Graphics**
+        - [ ] Definition
+        - [ ] Bits
+        - [ ] Data size units
+        - [ ] Characteristics
+    - [ ] **Common Raster File Formats**
+        - [ ] JPEG (.jpeg, .jpg)
+        - [ ] PNG (.png)
+        - [ ] GIF (.gif)
+    - [ ] **Common Raster Editing Programs**
+        - [ ] Microsoft Paint
+        - [ ] Adobe Photoshop
+        - [ ] Gimp
+    - [ ] **Vector Graphics**
+        - [ ] Definition
+        - [ ] Characteristics
+    - [ ] **Common Vector File Formats**
+        - [ ] Illustrator (.ai)
+        - [ ] Encapsulated PostScript (.eps)
+        - [ ] PostScript (.ps)
+        - [ ] Scalable Vector Graphic (.svg)
+        - [ ] Embedding of raster images within vector files
+    - [ ] **Color Depth (Bit Depth)**
+        - [ ] Definition
+        - [ ] Types:
+            - [ ] Monochrome
+            - [ ] Grayscale
+            - [ ] True color
+    - [ ] **Classification of Display Devices**
+        - [ ] Analog display devices
+            - [ ] Oscilloscope tubes
+            - [ ] TV CRTs
+        - [ ] Digital display devices
+            - [ ] LED (including OLED) displays
+            - [ ] VF displays
+            - [ ] LCD displays
+                - [ ] TFT-LCD
+            - [ ] Nixie tube displays and PDPs
+            - [ ] Electroluminescent displays (ELDs)
+        - [ ] Others
+            - [ ] Electronic paper
+            - [ ] Nanoelectronics-based displays
+            - [ ] Laser TV
+    - [ ] **Active vs. Passive Displays**
+        - [ ] Active displays
+        - [ ] Passive displays
+    - [ ] **Luminescence in Active Displays**
+        - [ ] Definition
+        - [ ] Types:
+            - [ ] Photoluminescence
+            - [ ] Cathodoluminescence
+            - [ ] Electroluminescence
+            - [ ] Fluorescence
+            - [ ] Phosphorescence
+    - [ ] **Attributes of a Good Display Device**
+        - [ ] Pixel resolution
+        - [ ] Display size
+        - [ ] Viewing angle
+        - [ ] Response time
+        - [ ] Aspect ratio
+        - [ ] Brightness (luminance)
+    - [ ] **Cathode-Ray Tubes (CRTs)**
+        - [ ] Content and objectives
+        - [ ] Components
+        - [ ] Features
+        - [ ] **Monitor Features**
+            - [ ] Screen size
+            - [ ] Aspect ratio
+            - [ ] Refresh rate
+            - [ ] Color depth
+        - [ ] Electron gun
+        - [ ] Electromagnetic focusing
+        - [ ] Electromagnetic deflection
+    - [ ] **Oscilloscope Tubes**
+        - [ ] Brightness
+        - [ ] Focus
+        - [ ] Electrostatic focusing and deflection
+    - [ ] **Picture (TV) Tubes (Kinescopes)**
+        - [ ] Deflecting system
+        - [ ] Phosphor
+        - [ ] Electrostatic focusing and electromagnetic deflection
+        - [ ] Rectilinear scanning
+        - [ ] Intensity modulation by video signal
+    - [ ] **Color Picture Tubes**
+        - [ ] Screen
+        - [ ] Mask
+        - [ ] Electron gun
+        - [ ] Slot matrix tube
+    - [ ] **Flat Panel Displays**
+        - [ ] Motivation
+        - [ ] Characteristics
+        - [ ] Seven-segment font for numeric display
+        - [ ] Graphic displays as large dot matrices
+        - [ ] Types requiring continuous refresh
+    - [ ] **LED Displays**
+        - [ ] Use of light-emitting diodes
+        - [ ] Operation based on injection luminescence
+        - [ ] Availability in various sizes and shapes
+        - [ ] Radiation of red, orange, yellow, or green light
+        - [ ] Characteristics
+    - [ ] **Gas Discharge Displays and Plasma Display Panels**
+    - [ ] **Liquid Crystal Displays (LCDs)**
+        - [ ] Use of liquid crystals
+        - [ ] Types of ordering in liquid crystals
+        - [ ] Alignment of molecules upon contact with a solid surface
+        - [ ] Control of molecular direction by electric field
+        - [ ] Use of twisted nematic cells
+        - [ ] Rotation of polarized light
+        - [ ] Change in molecular orientation by electric field
+        - [ ] Structure of a typical LCD cell
+        - [ ] Transmission LCDs
+        - [ ] Color displays using color filters
+        - [ ] Advantages:
+            - [ ] Low power consumption
+            - [ ] Low voltage operation and easy driving by MOS IC drivers
+        - [ ] Disadvantages
+        - [ ] Direct-driven image elements
+        - [ ] Addressing pixels in rows and columns
+        - [ ] TFT-LCDs
+            - [ ] Individual pixel control using transistor switches
+            - [ ] Assembly of TFT-array and color-filter substrates
+    - [ ] **Carbon Nanotube Displays**
+    - [ ] **Electronic Paper (E-paper)**
+        - [ ] Definition
+        - [ ] Characteristics
+- [ ] **GPU (Graphics Processing Unit)**
+    - [ ] **GPU Parallelism**
+        - [ ] Similarity to multicore parallelism
+        - [ ] Key challenge: scheduling threads on cores
+        - [ ] Hardware multithreading
+        - [ ] Fine-grain hardware multithreading
+    - [ ] **GPU Architectures**
+        - [ ] Highly data-parallel processing
+        - [ ] Characteristics:
+            - [ ] High multithreading and thread switching to hide memory latency
+            - [ ] Less reliance on multi-level caches
+            - [ ] Wide and high-bandwidth graphics memory
+        - [ ] Trend toward general-purpose GPUs (GPGPUs)
+        - [ ] Heterogeneous CPU/GPU systems
+    - [ ] **GPU Programming Languages and APIs**
+        - [ ] DirectX
+        - [ ] OpenGL
+        - [ ] C for Graphics (Cg)
+        - [ ] High-Level Shader Language (HLSL)
+        - [ ] Compute Unified Device Architecture (CUDA)
+    - [ ] **GPU Performance vs. CPU**
+        - [ ] Higher throughput and throughput per watt for GPUs
+    - [ ] **Evolution of GPUs**
+        - [ ] Fixed function pipeline (around 2000)
+        - [ ] Programmable vertex and pixel processors (around 2005)
+        - [ ] Unified architecture (post-2006)
+    - [ ] **Reasons for GPU Performance**
+        - [ ] Parallelism with thousands of cores
+        - [ ] Pipelining
+        - [ ] Hardware multithreading
+        - [ ] Streaming caches instead of multi-scale caching
+        - [ ] Emphasis on throughput rather than latency
+    - [ ] **System Architecture with a GPU**
+        - [ ] Components
+        - [ ] Interconnection technologies and bandwidths
+    - [ ] **High-Performance Graphics Memory**
+        - [ ] Use of 3D-stacked memory
+    - [ ] **Massively Parallel Architectures**
+        - [ ] NVIDIA CUDA
+        - [ ] OpenCL
+        - [ ] Synchronous execution of massive thread counts
+    - [ ] **CUDA Memory Hierarchy**
+        - [ ] Per-thread registers
+        - [ ] Per-block shared memory
+        - [ ] Global memory
+        - [ ] Read-only, cached constant memory
+    - [ ] **CUDA Execution Abstraction**
+        - [ ] Block
+            - [ ] 1D, 2D, or 3D
+            - [ ] Thread synchronization and shared memory access within a block
+        - [ ] Grid
+            - [ ] 1D or 2D
+            - [ ] Parallel or sequential execution of blocks
+        - [ ] Kernel execution in grid units
+        - [ ] Limited recursion depth
+    - [ ] **Heterogeneous Computing**
+        - [ ] Host
+        - [ ] Device
+    - [ ] **CUDA Programming**
+        - [ ] `do_something_on_host()`
+        - [ ] `kernel<<<nBlk, nTid>>>(args)`
+        - [ ] `cudaDeviceSynchronize()`
+        - [ ] `do_something_else_on_host()`
+        - [ ] Function types:
+            - [ ] `__global__`
+            - [ ] `__device__`
+            - [ ] `__host__`
+    - [ ] **Picture Blurring Example**
+    - [ ] **Matrix Multiplication Performance Engineering**
+    - [ ] **Resource Balancing**
+        - [ ] Determining the optimal number of threads per block
+        - [ ] Register and shared memory availability limitations
+        - [ ] Platform-specific limitations
+    - [ ] **Warp Scheduling**
+        - [ ] Execution of threads in 32-thread warp units
+        - [ ] SIMD execution within a warp
+        - [ ] Handling conditional statements
+    - [ ] **Memory Architecture Caveats**
+        - [ ] Shared memory peculiarities
+        - [ ] Slow global memory access
+- [ ] **Hierarchical Modelling**
+    - [ ] **Limitations of Linear Modelling**
+    - [ ] **Symbols and Instances**
+        - [ ] Prototype object (symbol) and its appearances (instances)
+        - [ ] Instance transformation
+    - [ ] **Symbol-Instance Table**
+    - [ ] **Relationships in a Car Model**
+        - [ ] Limitations of symbol-instance tables
+    - [ ] **Structure Through Function Calls**
+        - [ ] Use of function calls to represent hierarchical structure
+        - [ ] Limitations
+    - [ ] **Graphs**
+        - [ ] Definition
+        - [ ] Directed vs. undirected edges
+        - [ ] Cycles
+    - [ ] **Trees**
+        - [ ] Definition
+        - [ ] Root node, leaf nodes
+    - [ ] **Tree Model of a Car**
+    - [ ] **Directed Acyclic Graphs (DAGs)**
+    - [ ] **Modelling with Trees**
+        - [ ] Placement of information in nodes and edges
+        - [ ] Node contents
+    - [ ] **Tree Model of a Robot**
+        - [ ] Code representation of relationships
+        - [ ] Easy modification of part appearance
+    - [ ] **General Node Structure**
+        - [ ] Drawing code or pointer to drawing function
+        - [ ] Linked list of pointers to children
+        - [ ] Matrix relating node to parent
+    - [ ] **Generalizations**
+        - [ ] Handling multiple children
+        - [ ] Representation of general trees
+        - [ ] Traversal of tree data structures
+        - [ ] Animation
+        - [ ] Dynamic creation and deletion of nodes
+- [ ] **Rendering**
+    - [ ] Meaning
+    - [ ] Definition
+    - [ ] Applications
+    - [ ] Benefits
+    - [ ] Process
+    - [ ] Use in video editing
+    - [ ] **Four Major Rendering Tasks**
+        - [ ] Modeling
+        - [ ] Geometric processing
+            - [ ] Transformations
+            - [ ] Clipping
+            - [ ] Shading
+            - [ ] Hidden-surface removal
+            - [ ] Projection
+        - [ ] Rasterization (scan conversion)
+        - [ ] Display
+    - [ ] **Scan Conversion (Rasterization)**
+        - [ ] Definition
+        - [ ] Purpose
+        - [ ] Operations
+        - [ ] Interleaved processes
+    - [ ] **Scan Conversion Algorithms**
+        - [ ] Scan conversion of points
+            - [ ] Modeling coordinates
+            - [ ] Screen coordinates
+            - [ ] Conversion functions
+        - [ ] Scan conversion of lines
+        - [ ] Scan conversion of circles
+        - [ ] Scan conversion of ellipses
+        - [ ] Scan conversion of polygons
+    - [ ] **Line Drawing**
+        - [ ] Importance
+        - [ ] Display
+        - [ ] Line drawing algorithm requirements
+    - [ ] **Scan Conversion of Lines**
+        - [ ] Problem
+        - [ ] Horizontal Line Drawing Algorithm
+            - [ ] Keeping y constant and incrementing x
+            - [ ] Code example
+        - [ ] Arbitrary Line Drawing Algorithms
+            - [ ] Challenges
+            - [ ] Algorithms: DDA and Bresenham's algorithm
+    - [ ] **Digital Differential Analyzer (DDA) Algorithm**
+        - [ ] Origin
+        - [ ] Incremental approach
+        - [ ] Basic concept
+        - [ ] Derivation
+        - [ ] Simple algorithm
+        - [ ] Case 1: |m| < 1 and Xstart < Xend
+        - [ ] Case 2: |m| > 1 and Ystart < Yend
+        - [ ] Example
+    - [ ] **Bresenham's Line Drawing Algorithm**
+        - [ ] Advantages over DDA
+        - [ ] Basic concept
+        - [ ] Main idea
+        - [ ] Decision parameter (pk)
+        - [ ] Recursive expression for decision parameter
+        - [ ] General solution
+        - [ ] Example
+    - [ ] **Circle Drawing**
+        - [ ] Direct algorithm
+            - [ ] Inefficiency
+    - [ ] **Midpoint Circle Algorithm**
+        - [ ] Eight-way symmetry
+        - [ ] Sampling at unit intervals
+        - [ ] Decision parameter (pk)
+        - [ ] Incremental calculation of decision parameters
+        - [ ] Steps
+        - [ ] Example
+    - [ ] **Ellipse Drawing**
+        - [ ] General ellipse definition
+        - [ ] Ellipse equation
+        - [ ] Difficulty in plotting points directly
+        - [ ] Parametric equation
+        - [ ] General case ellipses
+        - [ ] Drawing methods:
+            - [ ] Polygon approximation
+            - [ ] Rotation
+            - [ ] Midpoint algorithm for aligned axes
+    - [ ] **Midpoint Ellipse Algorithm**
+        - [ ] Symmetry considerations
+        - [ ] Unit steps in x and y
+        - [ ] Similarity to midpoint circle algorithm
+        - [ ] Initialization
+        - [ ] Steps
+    - [ ] **Polygon Filling**
+        - [ ] Types:
+            - [ ] Solid fill
+            - [ ] Pattern fill
+        - [ ] Polygon representation
+        - [ ] Displaying polygons
+    - [ ] **Polygon Filling Algorithms**
+        - [ ] Inside-outside tests
+        - [ ] Types:
+            - [ ] Scan fill
+            - [ ] Seed fill
+            - [ ] Boundary fill
+            - [ ] Flood fill
+        - [ ] Scan-line polygon fill
+            - [ ] Locating scan-line intersections with edges
+            - [ ] Sorting intersection points
+            - [ ] Drawing interiors
+            - [ ] Handling corners and edge endpoints
+            - [ ] Basic algorithm
+            - [ ] Speeding up
+            - [ ] Determining edge intersections incrementally
+            - [ ] Active edge table (AET)
+        - [ ] Boundary Fill Algorithm
+            - [ ] 4-connected polygon
+            - [ ] 8-connected polygon
+            - [ ] Example
+            - [ ] Limitations of 4-connected approach
+        - [ ] Flood Fill Algorithm (Span Flood-Fill)
+            - [ ] Motivation
+            - [ ] Steps
+            - [ ] Example
+            - [ ] Implementations
+            - [ ] Modeling as a graph traversal problem
+            - [ ] Code example
+    - [ ] **Character Attributes**
+        - [ ] Controlling character appearance
+        - [ ] Text attributes
+        - [ ] Bundled attributes
+    - [ ] **Antialiasing**
+        - [ ] Techniques: increased resolution (sampling), supersampling
+        - [ ] Supersampling
+- [ ] **Scan Conversion Algorithms (Point and Line)**
+- [ ] **Four Major Rendering Tasks**
+    - [ ] Modeling
+    - [ ] Geometric processing
+        - [ ] Transformations
+
+This checklist summarizes the main topics and subtopics covered in your provided sources. You can use it to track your progress as you learn about computer graphics concepts.
