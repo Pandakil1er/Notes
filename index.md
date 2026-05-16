@@ -1,19 +1,16 @@
-# 📚 My Notes
+# My Notes
 
-Welcome to my digital garden 🌱
+Snippets and Random Notes by me
 
 ---
 
-## 🧠 Vaults
+## Vaults
 
-### 📁 [[OTHERS]]
+### [[OTHERS]]
 
 General notes, experiments, and random learnings.
 
-### 🌐 [[Web]]
+### [[Web]]
 
-Web development notes — HTML, CSS, backend, etc.
+Old Web development notes — HTML, CSS, backend, etc.
 
-## 🧭 Explore
-
-Use the sidebar or graph view to navigate everything.
