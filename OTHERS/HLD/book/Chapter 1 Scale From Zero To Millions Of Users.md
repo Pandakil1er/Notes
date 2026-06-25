@@ -16,7 +16,7 @@ Scaling a system to support millions of users is a complex, iterative journey re
 ## Section 1: Single Server Setup
 Initially, all components (web app, database, cache) run on a single server. 
 
-![[images/chapter-01-single-server.png]]
+![](images/chapter-01-single-server.png)
 
 ### Request Flow
 1. Users access the application via domain names (e.g., `api.mysite.com`), resolved to IP addresses using DNS.
