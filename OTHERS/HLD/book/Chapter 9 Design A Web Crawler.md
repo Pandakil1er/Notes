@@ -1,7 +1,7 @@
 ---
 title: "Readme"
 created: "2026-03-14 05:50:50"
-modified: "2026-06-26 03:30:15"
+modified: "2026-06-26 03:46:12"
 tags: []
 draft: false
 ---
@@ -40,9 +40,7 @@ A good web crawler must address:
 ## Step 2: High-Level Design
 
 ### Components
-<p align="center">
 ![[images/chapter-09-web-crawler-architecture.png]]
-</p>
 
 1. **Seed URLs:** Starting points for the crawler.
     - Need to selective as a good starting point that a crawler can utilize to traverse as many links as possible.

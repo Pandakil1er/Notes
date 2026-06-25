@@ -1,7 +1,7 @@
 ---
 title: "Readme"
 created: "2026-03-14 05:50:50"
-modified: "2026-06-26 03:30:15"
+modified: "2026-06-26 03:46:12"
 tags: []
 draft: false
 ---
@@ -29,9 +29,7 @@ This chapter addresses the challenge of designing a **unique ID generator** for 
 ### 1. Multi-Master Replication
 - **Approach:** Use database `auto_increment` with step increments (e.g., `+k` for k servers).
 
-    <p align="left">
     ![[images/chapter-07-multi-master.png]]
-    </p>
 
 - **Drawbacks:**
   - Hard to scale across data centers.
@@ -43,9 +41,7 @@ This chapter addresses the challenge of designing a **unique ID generator** for 
     - Generate 128-bit unique identifiers independently on each server using UUID.
     - UUIDs can be generated independently without coordination between servers
 
-        <p align="left">
         ![[images/chapter-07-uuid.png]]
-        </p>
 
 - **Advantages:**
   - No coordination needed between servers.
@@ -58,9 +54,7 @@ This chapter addresses the challenge of designing a **unique ID generator** for 
 ### 3. Ticket Server
 - **Approach:** Use a centralized database server to increment and assign IDs.
 
-    <p align="left">
     ![[images/chapter-07-ticket-server.png]]
-    </p>
 
 - **Advantages:**
   - Simple to implement for small-scale systems.

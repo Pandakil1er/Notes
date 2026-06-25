@@ -1,7 +1,7 @@
 ---
 title: "Readme"
 created: "2026-03-14 05:50:50"
-modified: "2026-06-26 03:30:16"
+modified: "2026-06-26 03:46:12"
 tags: []
 draft: false
 ---
@@ -96,7 +96,6 @@ The design includes two main flows:
     1. **Fetch Friend IDs:** Retrieve the friend list from a graph database.
     2. **Filter Friends from Cache:** Access user settings in the cache to exclude certain friends (e.g., muted friends or selective sharing preferences).
     3. **Send to Message Queue:** Send the filtered friend list along with the new post ID to a message queue for processing.
-    4. **Fanout Workers:** Workers retrieve data from the message queue and update the news feed cache. The cache stores `<post_id, user_id>` mappings instead of full user and post objects to save memory.
     5. **Store in News Feed Cache:** Append new post IDs to the friends’ news feed cache. A configurable limit ensures that only recent posts are stored, as most users focus on the latest content, keeping cache memory consumption manageable.
 
         ![[images/chapter-11-fanout-service.png]]

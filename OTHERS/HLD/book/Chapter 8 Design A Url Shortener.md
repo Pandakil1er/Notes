@@ -1,7 +1,7 @@
 ---
 title: "Readme"
 created: "2026-03-14 05:50:50"
-modified: "2026-06-26 03:30:15"
+modified: "2026-06-26 03:46:12"
 tags: []
 draft: false
 ---
@@ -31,9 +31,7 @@ This chapter discusses the design of a URL shortening service like TinyURL. The 
    - Endpoint: `GET api/v1/shortUrl`  
    - Returns: `longURL` for redirection.
 
-    <p align="center">
     ![[images/chapter-08-url-redirection.png]]
-    </p>
 
 ### URL Redirection
 - **301 Redirect:**  A 301 redirect shows that the requested URL is “permanently” moved to the long URL. The browser caches the response, and
@@ -41,9 +39,7 @@ subsequent requests for the same URL will not be sent to the URL shortening serv
 - **302 Redirect:** Temporary; useful for analytics like tracking clicks.
 
 ### URL Shortening
-<p align="center">
     ![[images/chapter-08-url-shortening.png]]
-</p>
 
 - Use a **hash function** to generate a short URL, mapping long URLs to unique shortened versions.
 - The hash function must satisfy the following requirements:
@@ -83,9 +79,7 @@ Convert ID `2009215674938` to Base 62:
 - To resolve collisions,recursively append a new predefined string until no more collision but this can be expensive.
 - Resolve collisions with **Bloom Filters** for efficient lookup.
 
-    <p align="center">
     ![[images/chapter-08-url-lookup.png]]
-    </p>
 
 ### Comparison
 
@@ -106,9 +100,7 @@ Convert ID `2009215674938` to Base 62:
 
 ### URL Shortening Flow
 
-<p align="center">
     ![[images/chapter-08-url-shortening-flow.png]]
-</p>
 
 1. Check if `longURL` exists in the database.
 2. If found, return the existing `shortURL`.
@@ -122,9 +114,7 @@ Convert ID `2009215674938` to Base 62:
 ---
 
 ### URL Redirecting Flow
-<p align="center">
     ![[images/chapter-08-url-redirecting-flow.png]]
-</p>
 
 1. User clicks a `shortURL`.
 2. Query `<shortURL, longURL>` mapping:

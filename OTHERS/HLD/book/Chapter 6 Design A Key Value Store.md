@@ -1,7 +1,7 @@
 ---
 title: "Readme"
 created: "2026-03-14 05:50:50"
-modified: "2026-06-26 03:30:15"
+modified: "2026-06-26 03:46:12"
 tags: []
 draft: false
 ---
@@ -43,9 +43,7 @@ A **distributed key-value store** partitions data across multiple servers and mu
 
 **Trade-off:** According to CAP theorem only two of the three guarantees can be achieved.
 
-<p align="center">
   ![[images/chapter-06-cap.png]]
-</p>
 
 #### System Types:
 - **CP Systems:** Consistency and partition tolerance while sacrificing availability (e.g., banking systems).
@@ -57,9 +55,7 @@ A **distributed key-value store** partitions data across multiple servers and mu
     In a distributed system, partitions are inevitable. When a partition occurs, we must choose between consistency and availability. For example, if node n3 goes down, 
     any data written to nodes n1 or n2 cannot be propagated to n3. Conversely, if data is written to n3 but not yet propagated to n1 and n2, nodes n1 and n2 will have stale data.
 
-    <p align="center">
     ![[images/chapter-06-server-down.png]]
-    </p>
     
 - If we choose CP system, we must block all write operations to n1 and n2 to avoid data inconsistency.
 - If we choose AP system, the system keeps accepting reads, even though it might return stale data. 
@@ -79,9 +75,7 @@ and data will be synced to n3 when the network partition is resolved.
 - Replicate data across `N` servers for high availability.
 - The N servers are chosen by walking clockwise from the server position and choose the first N servers on the ring to store data copies.Place replicas in distinct data centers to improve reliability in case of virtual nodes.
 
-    <p align="center">
     ![[images/chapter-06-data-replication.png]]
-    </p>
 
 ### 3. Consistency
 Since data is replicated at multiple nodes, it must be synchronized across replicas.
@@ -92,9 +86,7 @@ Since data is replicated at multiple nodes, it must be synchronized across repli
   - **Rule:** `W + R > N` ensures strong consistency.
   - The configuration of W, R and N is a typical tradeoff between latency and consistency. 
 
-    <p align="center">
     ![[images/chapter-06-quorum-consensus.png]]
-    </p>
     
     - If R = 1 and W = N, the system is optimized for a fast read.
     - If W = 1 and R = N, the system is optimized for fast write.
@@ -138,9 +130,7 @@ vector locks are used to solve inconsistency problems.
 
     4. **Conflict Resolution:** When conflicts are detected (sibling versions), the system relies on application-specific logic or client intervention to   reconcile the data.
 
-        <p align="center">
         ![[images/chapter-06-vector-clock.png]]
-        </p>
 
 - **Challenges:**
   - Increased complexity for clients.
@@ -164,9 +154,7 @@ It is insufficient to believe that a server is down because another server says 
 
 #### b. Temporary Failures
 - **Sloppy Quorum:** Use healthy nodes to maintain operations temporarily.
-        <p align="center">
         ![[images/chapter-06-sloppy-quorum.png]]
-        </p>
 
     - After detecting failures, the system needs to deploy certain mechanisms to ensure availability
     - Instead of enforcing the quorum requirement, the system chooses the first W healthy servers for writes and first R
@@ -250,9 +238,7 @@ It is insufficient to believe that a server is down because another server says 
 
 ## Final Architecture
 
-<p align="center">
 ![[images/chapter-06-final-architecture.png]]
-</p>
 
 
 -  Clients communicate with the key-value store through simple APIs: get(key) and put(key,
