@@ -1,7 +1,7 @@
 ---
 title: "System Design Interviews guide"
 created: "2026-02-19 06:52:24"
-modified: "2026-06-26 03:18:07"
+modified: "2026-06-26 03:21:10"
 tags: []
 draft: false
 ---

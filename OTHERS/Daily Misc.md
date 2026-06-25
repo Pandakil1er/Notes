@@ -1,7 +1,7 @@
 ---
-title: "Daily Misc"
-created: "2026-06-26 02:55:21"
-modified: "2026-06-26 03:20:17"
+title: Daily Misc
+created: 2026-06-26 02:55:21
+modified: "2026-06-26 03:29:34"
 tags: []
 draft: false
 ---
@@ -57,4 +57,9 @@ Output:
 
 ```
 Anshaj
+```
+
+
+```
+git clean -f -d
 ```
