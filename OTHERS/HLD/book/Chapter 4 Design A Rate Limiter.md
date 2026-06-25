@@ -1,7 +1,7 @@
 ---
 title: "Chapter 4 Design A Rate Limiter"
 created: "2026-03-14 05:50:50"
-modified: "2026-06-26 03:46:12"
+modified: "2026-06-26 04:33:26"
 tags: []
 draft: false
 ---
@@ -34,7 +34,7 @@ This chapter explores the design and implementation of a rate limiter—a system
 
 ## Step 2: High-Level Design
 ### Placement Options
-![[images/chapter-04-rate_limiter_architecture.png]]
+![[chapter-04-rate_limiter_architecture.png]]
 
 1. **Client-Side Implementation:** Unreliable due to potential misuse.
 2. **Server-Side Implementation:** Preferred for control and reliability.
@@ -49,7 +49,7 @@ This chapter explores the design and implementation of a rate limiter—a system
 
 ## Step 3: Rate Limiting Algorithms
 ### 1. Token Bucket
-![[images/chapter-04-token-bucket.png]]
+![[chapter-04-token-bucket.png]]
 
 - **Description:** Tokens are added to a bucket at a fixed rate; each request consumes a token.
 - **Parameters:** Bucket size and refill rate.
@@ -59,7 +59,7 @@ This chapter explores the design and implementation of a rate limiter—a system
 
 
 ### 2. Leaking Bucket
-![[images/chapter-04-leaking-bucket.png]]
+![[chapter-04-leaking-bucket.png]]
 
 - **Description:** Processes requests at a fixed rate using a FIFO queue.
 - **Pros:** Memory-efficient, stable outflow rate.
@@ -71,7 +71,7 @@ This chapter explores the design and implementation of a rate limiter—a system
 
 
 ### 3. Fixed Window Counter
-![[images/chapter-04-fixed-window-counter.png]]
+![[chapter-04-fixed-window-counter.png]]
 
 - **Description:** Divides time into fixed intervals and uses counters to limit requests.
 - **Pros:** Simple, efficient for specific use cases.
@@ -80,11 +80,11 @@ This chapter explores the design and implementation of a rate limiter—a system
 - Sudden burst of traffic at the edges of time windows
 could cause more requests than allowed quota to go through.
 
-  ![[images/chapter-04-fixed-window-issue.png]]
+  ![[chapter-04-fixed-window-issue.png]]
 
 
 ### 4. Sliding Window Log
-![[images/chapter-04-sliding-window-log.png]]
+![[chapter-04-sliding-window-log.png]]
 
 - **Description:** Tracks timestamps to allow a rolling time window.
 - **Pros:** Accurate rate limiting.
@@ -93,7 +93,7 @@ could cause more requests than allowed quota to go through.
 
 
 ### 5. Sliding Window Counter
-![[images/chapter-04-sliding-window-counter.png]]
+![[chapter-04-sliding-window-counter.png]]
 
 - **Description:** Combines fixed window and sliding log methods for smoothing spikes.
 - **Pros:** Memory-efficient, handles traffic bursts.
@@ -103,7 +103,7 @@ could cause more requests than allowed quota to go through.
 
 
 ## High-Level Architecture
-![[images/chapter-04-architecture.png]]
+![[chapter-04-architecture.png]]
 
 - **Data Storage:** Use in-memory caching (e.g., Redis) for fast counter operations.
 - **Steps:**

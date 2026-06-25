@@ -1,7 +1,7 @@
 ---
 title: "Chapter 12 Design A Chat System"
 created: "2026-03-14 05:50:50"
-modified: "2026-06-26 03:46:12"
+modified: "2026-06-26 04:33:26"
 tags: []
 draft: false
 ---
@@ -40,7 +40,7 @@ The system targets **50 million daily active users (DAU)** and stores chat histo
 1. **Sender Side:** HTTP for sending messages, leveraging persistent connections for efficiency.
 
       <div style="margin-left:2rem">
-      ![[images/chapter-12-basic-design.png]]    
+      ![[chapter-12-basic-design.png]]    
       <div>
 
 2. **Receiver Side:**
@@ -48,27 +48,27 @@ The system targets **50 million daily active users (DAU)** and stores chat histo
       - Client periodically asks the server if there are messages available.
       - Inefficient due to frequent, redundant requests.
 
-         ![[images/chapter-12-polling.png]]    
+         ![[chapter-12-polling.png]]    
 
    - **Long Polling:** 
       - Keeps the connection open until messages arrive. 
       - Inefficient for inactive users.
 
-         ![[images/chapter-12-long-polling.png]]
+         ![[chapter-12-long-polling.png]]
 
    - **WebSocket:** 
       - A bi-directional, persistent connection for real-time communication, chosen for both sending and receiving messages.
       - Uses WebSockets (ws) protocol for sending and recieving messages.
 
-         ![[images/chapter-12-websocket.png]]    
+         ![[chapter-12-websocket.png]]    
    
 ---
 
 ### Components
 
 <div style="margin-left:5rem">
-   ![[images/chapter-12-high-level-stateless-arch.png]]    
-   ![[images/chapter-12-high-level-statefull-arch.png]]
+   ![[chapter-12-high-level-stateless-arch.png]]    
+   ![[chapter-12-high-level-statefull-arch.png]]
 </div>
 
 1. **Stateless Services:**
@@ -87,7 +87,7 @@ The system targets **50 million daily active users (DAU)** and stores chat histo
 
 The client maintains a persistent WebSocket connection to a chat server for real-time messaging.
 
-![[images/chapter-12-high-level-design.png]]
+![[chapter-12-high-level-design.png]]
 
 - Chat servers facilitate message sending/receiving.
 - Presence servers manage online/offline status.
@@ -109,15 +109,15 @@ Following are the data models for one-to-one chat and group chat.
       - A better approach is to use local sequence number generator. Local means IDs are only unique within a group.
       - The reason why local IDs work is that maintaining message sequence within one-on-one channel or a group channel is sufficient. 
       
-      ![[images/chapter-12-one-to-one-chat.png]]   
-      ![[images/chapter-12-group-chat.png]]   
+      ![[chapter-12-one-to-one-chat.png]]   
+      ![[chapter-12-group-chat.png]]   
 
 
 ## Step 3: Design Deep Dive
 
 ### Service Discovery
 
-![[images/chapter-12-zookeeper.png]]
+![[chapter-12-zookeeper.png]]
 
 - The primary role of service discovery is to recommend the best chat server for a client based
 on the criteria like geographical location, server capacity. 
@@ -138,7 +138,7 @@ on the criteria like geographical location, server capacity.
 
 #### Group Chat
 
-![[images/chapter-12-group-chat-flow.png]]
+![[chapter-12-group-chat-flow.png]]
 
 - Messages are copied to individual inboxes for each recipient in the group.
 - Simplifies synchronization but becomes expensive for larger groups.
@@ -154,7 +154,7 @@ Each device maintains a variable called cur_max_message_id, which keeps track of
 message ID on the device. Messages that satisfy the following two conditions are considered
 as news messages:
 
-![[images/chapter-12-message-synchronization.png]]
+![[chapter-12-message-synchronization.png]]
 
 - The recipient ID is equal to the currently logged-in user ID.
 - Message ID in the key-value store is larger than cur_max_message_id
@@ -163,7 +163,7 @@ as news messages:
 
 ### Online Presence
 1. **Heartbeat Mechanism:** 
-   ![[images/chapter-12-heartbeat-mechanism.png]]
+   ![[chapter-12-heartbeat-mechanism.png]]
    
    - Clients send periodic heartbeats to presence servers to indicate they are online. 
    - If no heartbeat is received within a threshold (for eg x = 30), the user is marked offline.
@@ -172,7 +172,7 @@ as news messages:
 
 2. **Fanout Model:** 
 
-   ![[images/chapter-12-fanout-presence.png]]
+   ![[chapter-12-fanout-presence.png]]
 
    - Presence updates are pushed to friends using a publish-subscribe model in which each friend pair maintains a channel.
    - When User A’s online status changes, it publishes the event to three channels, channel A-B, A-C, and A-D. 

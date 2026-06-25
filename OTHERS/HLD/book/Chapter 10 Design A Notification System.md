@@ -1,7 +1,7 @@
 ---
 title: "Chapter 10 Design A Notification System"
 created: "2026-03-14 05:50:50"
-modified: "2026-06-26 03:46:12"
+modified: "2026-06-26 04:33:26"
 tags: []
 draft: false
 ---
@@ -43,7 +43,7 @@ The chapter focuses on designing a scalable system capable of sending millions o
    - **Emails:** Commercial email services like SendGrid or Mailchimp.
 
 2. **Contact Info Gathering:**
-   ![[images/chapter-10-contact-info-gathering.png]]
+   ![[chapter-10-contact-info-gathering.png]]
 
    - Collect device tokens, phone numbers, or email addresses during app installation or signup.
    - Store contact info in the database:
@@ -53,7 +53,7 @@ The chapter focuses on designing a scalable system capable of sending millions o
 
 3. **Notification Sending Flow:**
 
-   ![[images/chapter-10-high-level-design.png]]
+   ![[chapter-10-high-level-design.png]]
 
    - **Trigger Services:**
       - Generate events to initiate notifications (e.g., billing reminders, shipping updates).
@@ -73,7 +73,7 @@ The chapter focuses on designing a scalable system capable of sending millions o
 
 ### Improved Design
 
-   ![[images/chapter-10-improved-design.png]]
+   ![[chapter-10-improved-design.png]]
 
 - Move databases and caches out of the notification server.
 - Introduce **horizontal scaling** with multiple notification servers.
@@ -89,7 +89,7 @@ The chapter focuses on designing a scalable system capable of sending millions o
 
 ### Reliability
 1. **Prevent Data Loss:** 
-   ![[images/chapter-10-data-loss.png]]
+   ![[chapter-10-data-loss.png]]
 
    - Persist notification data in a database and implement a retry mechanism. 
    - The Notification log database is included for data persistence.
@@ -102,7 +102,7 @@ If seen before discard it, otherwise send out the notification.
 
 
 ### Additional Components
-   ![[images/chapter-10-events-tracking.png]]
+   ![[chapter-10-events-tracking.png]]
 
 1. **Notification Templates:** Preformatted templates for consistent and efficient notifications.
 2. **Notification Settings:**
@@ -119,7 +119,7 @@ If seen before discard it, otherwise send out the notification.
 
 ### Notification Flow
 
-   ![[images/chapter-10-updated-design.png]]
+   ![[chapter-10-updated-design.png]]
 
 1. Trigger services call APIs to send notifications.
 2. Notification servers validate requests and fetch metadata from caches or databases.

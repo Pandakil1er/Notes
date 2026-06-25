@@ -1,7 +1,7 @@
 ---
 title: "Chapter 2 Back Of The Envelope Estimation"
 created: "2026-03-14 05:50:50"
-modified: "2026-06-26 03:46:12"
+modified: "2026-06-26 04:33:26"
 tags: []
 draft: false
 ---
@@ -20,7 +20,7 @@ This chapter covers key concepts, methodologies, and examples to build proficien
 ### Power of Two
 Understanding data volume in terms of powers of two is fundamental:
 
-![[images/chapter-02-power-of-two.png]]
+![[chapter-02-power-of-two.png]]
 
 This knowledge helps in performing accurate storage and bandwidth calculations.
 

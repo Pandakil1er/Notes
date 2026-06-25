@@ -1,7 +1,7 @@
 ---
 title: "Chapter 9 Design A Web Crawler"
 created: "2026-03-14 05:50:50"
-modified: "2026-06-26 03:46:12"
+modified: "2026-06-26 04:33:26"
 tags: []
 draft: false
 ---
@@ -40,7 +40,7 @@ A good web crawler must address:
 ## Step 2: High-Level Design
 
 ### Components
-![[images/chapter-09-web-crawler-architecture.png]]
+![[chapter-09-web-crawler-architecture.png]]
 
 1. **Seed URLs:** Starting points for the crawler.
     - Need to selective as a good starting point that a crawler can utilize to traverse as many links as possible.
@@ -95,7 +95,7 @@ A good web crawler must address:
     - Use a mapping from hostnames to queues and worker (download) threads.
     - Each downloader thread has a separate FIFO queue and only downloads URLs from that queue.
 
-        ![[images/chapter-09-politeness.png]]
+        ![[chapter-09-politeness.png]]
 
     - **Queue router:** Ensures that each queue (b1, b2, … bn) only contains URLs from the same host.
     - **Mapping table:** It maps each host to a queue.
@@ -105,7 +105,7 @@ A good web crawler must address:
 - **Priority:** 
     - Assign higher priority to important pages (e.g., by PageRank or update frequency).
 
-        ![[images/chapter-09-prioritizer.png]]
+        ![[chapter-09-prioritizer.png]]
     
     - **Prioritizer:** It takes URLs as input and computes the priorities.
     - **Queue f1 to fn:** Each queue has an assigned priority. Queues with high priority are selected with higher probability.
@@ -133,7 +133,7 @@ A good web crawler must address:
 - Add modules for new content types (e.g., PNG downloader, web monitor).
 - Example: Plug in a module to monitor web content for copyright violations.
 
-    ![[images/chapter-09-extensibility.png]]
+    ![[chapter-09-extensibility.png]]
 ---
 
 ### Avoiding Problematic Content

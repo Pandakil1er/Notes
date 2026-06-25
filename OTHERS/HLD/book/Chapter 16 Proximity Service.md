@@ -1,7 +1,7 @@
 ---
 title: "Chapter 16 Proximity Service"
 created: "2026-03-14 05:50:50"
-modified: "2026-06-26 03:46:12"
+modified: "2026-06-26 04:33:26"
 tags: []
 draft: false
 ---
@@ -65,7 +65,7 @@ GET /v1/search/nearby
 ### **High-Level System Architecture**
 The system comprises of two parts: Location based service (LBS) and business related service.
 
-![[images/chapter-16-high-level-design.png]]
+![[chapter-16-high-level-design.png]]
 
 - **Location-Based Service (LBS)**: 
   - Processes location-based search queries.
@@ -87,7 +87,7 @@ The system comprises of two parts: Location based service (LBS) and business rel
 
 ### **Option 1: Two-Dimensional Search (Naive Approach)**
 
-![[images/chapter-16-2d-search.png]]
+![[chapter-16-2d-search.png]]
 
 The most intuitive way is to draw a circle with pre-defined radius and find all the businesses within the circle.
 
@@ -110,12 +110,12 @@ A potiential improvement is to build index on logitude and latitude columns, alh
   - Hash: Even grid, Geo Hash
   - Tree: Quadtree, Google S2, RTree
 
-  ![[images/chapter-16-geospatial-index-types.png]]
+  ![[chapter-16-geospatial-index-types.png]]
 
 
 ### **Option 2: Evenly Divided Grid**
 
-  ![[images/chapter-16-even-grid.png]]
+  ![[chapter-16-even-grid.png]]
 
 - **Divides the world into fixed-size grids**.
 - **Issue**: Uneven business distribution (high density in cities, sparse in rural areas).
@@ -126,19 +126,19 @@ A potiential improvement is to build index on logitude and latitude columns, alh
 - Repeat this subdivision
 
   <div style="margin-left:3rem">
-    ![[images/chapter-16-geohash.png]]
-    ![[images/chapter-16-geohash-1.png]]
+    ![[chapter-16-geohash.png]]
+    ![[chapter-16-geohash-1.png]]
   </div>
 
 
 - **Encodes latitude and longitude into a single alphanumeric string**. It has 12 precisions (levels)
 - **Hierarchical grid structure** allows for efficient searching.
 - The right precision is chosen by using the minimal geohash length according to the table.
-  ![[images/chapter-16-geohash-radius-mapping.png]]
+  ![[chapter-16-geohash-radius-mapping.png]]
 - Geohash guarantees that the longer a shared prefix is between two geohashes, the closer they are.
 
 - **Challenges**:
-  ![[images/chapter-16-boundary-issue.png]]
+  ![[chapter-16-boundary-issue.png]]
 
   - **Boundary issues** (businesses close to grid edges may get excluded).
     - Two locations can be very close but have no shared prefix at all (can be on other side of equator)
@@ -151,17 +151,17 @@ A potiential improvement is to build index on logitude and latitude columns, alh
   A quadtree is a tree data structure that recursively divides a two-dimensional space into four quadrants, with each internal node having exactly four children, representing the four sub-regions of the space.
   - The quadtree is an in-memory data structure and it runs on each LBS server and built on server startup time.
 
-  ![[images/chapter-16-quadtree.png]]
+  ![[chapter-16-quadtree.png]]
 
   - The root node is recursively broken down into 4 quadrants until no nodes are left with more than x number of businesses (100 in this case).
 
-  ![[images/chapter-16-building-quadtree.png]]
+  ![[chapter-16-building-quadtree.png]]
 
 - The quadtree index doen't take too much memory (typically in GBs) and can easily fit in one server.
 - Since tge time complexity to build the tree is nlogn, it might take a few minutes to build the tree.
 - **Efficient for k-nearest search queries** (e.g., find the closest gas station).
 
-  ![[images/chapter-16-realworld-quadtree.png]]
+  ![[chapter-16-realworld-quadtree.png]]
 
 #### Operational considerations
  - For around 200 million businesses, it might take few minutes to build a quadtree at the server start time.
@@ -174,8 +174,8 @@ It maps a sphere to a !D index based on Hilbert curve.Two points that are close 
 
 
   <div style="margin-left:3rem">
-    ![[images/chapter-16-hilbert-curve.png]]
-    ![[images/chapter-16-geofence.png]]
+    ![[chapter-16-hilbert-curve.png]]
+    ![[chapter-16-geofence.png]]
   </div>
 
 - **Divides the earth into small cells using a Hilbert curve**.
@@ -244,7 +244,7 @@ The most obvious cache key choice is the location coordinate, however it has a f
 ### **Final System Architecture**
 
 
-  ![[images/chapter-16-final-design.png]]
+  ![[chapter-16-final-design.png]]
 
 
 This final algorithm looks like this:

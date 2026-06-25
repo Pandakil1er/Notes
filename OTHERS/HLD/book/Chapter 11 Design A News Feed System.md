@@ -1,7 +1,7 @@
 ---
 title: "Chapter 11 Design A News Feed System"
 created: "2026-03-14 05:50:50"
-modified: "2026-06-26 03:46:12"
+modified: "2026-06-26 04:33:26"
 tags: []
 draft: false
 ---
@@ -50,7 +50,7 @@ The design includes two main flows:
 
 ### Feed Publishing
 
-   ![[images/chapter-11-feed-publishing.png]]
+   ![[chapter-11-feed-publishing.png]]
 
 1. **User Interaction:** The user publishes a post via the feed publishing API.
 2. **Load Balancer:** Distributes traffic to web servers.
@@ -63,7 +63,7 @@ The design includes two main flows:
 
 ### News Feed Building
 
-   ![[images/chapter-11-news-feed-building.png]]
+   ![[chapter-11-news-feed-building.png]]
 
 1. **User Interaction:** The user requests their news feed via the retrieval API.
 2. **Load Balancer:** Distributes traffic to web servers.
@@ -89,7 +89,7 @@ The design includes two main flows:
      - **Cons:** Slower feed retrieval.
    - **Hybrid Approach:** Use a push model for most users and a pull model for high-connection users (e.g., celebrities).
 
-        ![[images/chapter-11-feed-publishing-deep-dive.png]]
+        ![[chapter-11-feed-publishing-deep-dive.png]]
 
     The **fanout service** works as following:
 
@@ -98,7 +98,7 @@ The design includes two main flows:
     3. **Send to Message Queue:** Send the filtered friend list along with the new post ID to a message queue for processing.
     5. **Store in News Feed Cache:** Append new post IDs to the friends’ news feed cache. A configurable limit ensures that only recent posts are stored, as most users focus on the latest content, keeping cache memory consumption manageable.
 
-        ![[images/chapter-11-fanout-service.png]]
+        ![[chapter-11-fanout-service.png]]
 
 ## News Feed Retrieval Deep Dive
 
@@ -110,7 +110,7 @@ The cache is divided into five layers:
 4. **Action Cache:** Tracks user actions (likes, replies, shares).
 5. **Counter Cache:** Maintains counts for likes, replies, followers, etc.
 
-    ![[images/chapter-11-cache-architecture.png]]
+    ![[chapter-11-cache-architecture.png]]
 ---
 
 ## Key Optimizations

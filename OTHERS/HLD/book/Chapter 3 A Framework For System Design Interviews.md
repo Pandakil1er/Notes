@@ -1,7 +1,7 @@
 ---
 title: "Chapter 3 A Framework For System Design Interviews"
 created: "2026-03-14 05:50:50"
-modified: "2026-06-26 03:46:12"
+modified: "2026-06-26 04:33:26"
 tags: []
 draft: false
 ---

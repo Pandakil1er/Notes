@@ -1,7 +1,7 @@
 ---
 title: "Chapter 13 Design A Search Autocomplete System"
 created: "2026-03-14 05:50:50"
-modified: "2026-06-26 03:46:12"
+modified: "2026-06-26 04:33:26"
 tags: []
 draft: false
 ---
@@ -42,7 +42,7 @@ At the high-level, the system is broken down into two services:
 ---
 
 ### Data Gathering Service
-![[images/chapter-13-data-gathering.png]]
+![[chapter-13-data-gathering.png]]
 
 - Aggregates query data from analytics logs and updates the frequency table.
 - Processes historical data weekly to build a **trie** (prefix tree).
@@ -52,8 +52,8 @@ At the high-level, the system is broken down into two services:
 
 ### Query Service
 <div style="margin-left:3rem">
-    ![[images/chapter-13-frequency-table.png]]
-    ![[images/chapter-13-basic-search-suggestions.png]]
+    ![[chapter-13-frequency-table.png]]
+    ![[chapter-13-basic-search-suggestions.png]]
 </div>
 
 - Uses the frequency table from data gathering service.
@@ -74,7 +74,7 @@ The **trie** is a tree-like data structure used to store and retrieve query stri
 2. **Frequency Information:** Stores the popularity of queries at each node.
 
 4. **Steps to get top k most searched queries**
-   ![[images/chapter-13-trie-structure.png]]
+   ![[chapter-13-trie-structure.png]]
 
     - Find the prefix
     - Traverse the subtree from prefix node to get all valid children
@@ -84,7 +84,7 @@ The **trie** is a tree-like data structure used to store and retrieve query stri
 3. **Optimizations:**
    - Cache top-k queries at each node to speed up retrieval and avoid traversing the whole trie.
 
-        ![[images/chapter-13-cached-trie.png]]
+        ![[chapter-13-cached-trie.png]]
 
    - Limit prefix length to reduce search space as users rarely type a loong search query (say 50).
 
@@ -94,7 +94,7 @@ The **trie** is a tree-like data structure used to store and retrieve query stri
     - The source of data is from Analytics Log/DB.
 2. **Update:** Rarely updated in real-time; weekly updates replace old data.
 3. **Delete:** 
-      ![[images/chapter-13-delete-kv.png]]
+      ![[chapter-13-delete-kv.png]]
 
     - Filters remove unwanted or harmful suggestions (e.g., hate speech).
     - Having a filter layer gives us the flexibility of removing results based on different filter rules.
@@ -134,7 +134,7 @@ In the high-level design, whenever a user types a search query, data is updated 
 
 #### Updated Design
 
-![[images/chapter-13-data-gathering-flow.png]]
+![[chapter-13-data-gathering-flow.png]]
 
 1. **Analytics Logs:**
    - Stores raw query data as logs for weekly aggregation.
@@ -154,7 +154,7 @@ In the high-level design, whenever a user types a search query, data is updated 
             - Every prefix in the trie is mapped to a key in a hash table.
             - Data on each trie node is mapped to a value in a hash table.
 
-                ![[images/chapter-13-trie-db.png]]
+                ![[chapter-13-trie-db.png]]
 ---
 
 ### Scalability
@@ -162,7 +162,7 @@ In the high-level design, whenever a user types a search query, data is updated 
    - Distribute trie nodes across servers based on prefix ranges (e.g., `a-m`, `n-z`).
    - Further shard within prefixes to balance uneven distributions (e.g., `aa-ag`, `ah-an`).
 2. **Load Balancing:**
-   ![[images/chapter-13-sharding.png]]
+   ![[chapter-13-sharding.png]]
 
    - Use a shard map manager to route requests to the appropriate server.
 

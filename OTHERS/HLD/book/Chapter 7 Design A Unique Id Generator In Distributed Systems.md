@@ -1,7 +1,7 @@
 ---
 title: "Chapter 7 Design A Unique Id Generator In Distributed Systems"
 created: "2026-03-14 05:50:50"
-modified: "2026-06-26 03:46:12"
+modified: "2026-06-26 04:33:26"
 tags: []
 draft: false
 ---
@@ -29,7 +29,7 @@ This chapter addresses the challenge of designing a **unique ID generator** for 
 ### 1. Multi-Master Replication
 - **Approach:** Use database `auto_increment` with step increments (e.g., `+k` for k servers).
 
-    ![[images/chapter-07-multi-master.png]]
+    ![[chapter-07-multi-master.png]]
 
 - **Drawbacks:**
   - Hard to scale across data centers.
@@ -41,7 +41,7 @@ This chapter addresses the challenge of designing a **unique ID generator** for 
     - Generate 128-bit unique identifiers independently on each server using UUID.
     - UUIDs can be generated independently without coordination between servers
 
-        ![[images/chapter-07-uuid.png]]
+        ![[chapter-07-uuid.png]]
 
 - **Advantages:**
   - No coordination needed between servers.
@@ -54,7 +54,7 @@ This chapter addresses the challenge of designing a **unique ID generator** for 
 ### 3. Ticket Server
 - **Approach:** Use a centralized database server to increment and assign IDs.
 
-    ![[images/chapter-07-ticket-server.png]]
+    ![[chapter-07-ticket-server.png]]
 
 - **Advantages:**
   - Simple to implement for small-scale systems.
@@ -66,8 +66,8 @@ This chapter addresses the challenge of designing a **unique ID generator** for 
 ### 4. Twitter Snowflake Approach
 - **Approach:** 
 
-    ![[images/chapter-07-twitter-snowflake.png]]
-    ![[images/chapter-07-snowflake-id-breakdown.png]]
+    ![[chapter-07-twitter-snowflake.png]]
+    ![[chapter-07-snowflake-id-breakdown.png]]
 
     - Divide IDs into sections to ensure uniqueness and scalability.
     - **Sign Bit (1 bit):** Always `0`, potentially distinguishing signed and unsigned numbers.
