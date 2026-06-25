@@ -40,7 +40,7 @@ The system targets **50 million daily active users (DAU)** and stores chat histo
 1. **Sender Side:** HTTP for sending messages, leveraging persistent connections for efficiency.
 
       <div style="margin-left:2rem">
-      <img src="./images/basic-design.png" alt="Basic Design" width="500">    
+      ![[images/chapter-12-basic-design.png]]    
       <div>
 
 2. **Receiver Side:**
@@ -48,27 +48,27 @@ The system targets **50 million daily active users (DAU)** and stores chat histo
       - Client periodically asks the server if there are messages available.
       - Inefficient due to frequent, redundant requests.
 
-         <img src="./images/polling.png" alt="Polling" width="400">    
+         ![[images/chapter-12-polling.png]]    
 
    - **Long Polling:** 
       - Keeps the connection open until messages arrive. 
       - Inefficient for inactive users.
 
-         <img src="./images/long-polling.png" alt="Long Polling" width="400">
+         ![[images/chapter-12-long-polling.png]]
 
    - **WebSocket:** 
       - A bi-directional, persistent connection for real-time communication, chosen for both sending and receiving messages.
       - Uses WebSockets (ws) protocol for sending and recieving messages.
 
-         <img src="./images/websocket.png" alt="Websocket"  width="400" >    
+         ![[images/chapter-12-websocket.png]]    
    
 ---
 
 ### Components
 
 <div style="margin-left:5rem">
-   <img src="./images/high-level-stateless-arch.png" alt="High Level Architecture" height="350">    
-   <img src="./images/high-level-statefull-arch.png" alt="High Level Architecture" height="350" width="550">
+   ![[images/chapter-12-high-level-stateless-arch.png]]    
+   ![[images/chapter-12-high-level-statefull-arch.png]]
 </div>
 
 1. **Stateless Services:**
@@ -87,9 +87,7 @@ The system targets **50 million daily active users (DAU)** and stores chat histo
 
 The client maintains a persistent WebSocket connection to a chat server for real-time messaging.
 
-<div style="margin-left:3rem">
-      <img src="./images/high-level-design.png" alt="High Level Design" width="450"> 
-</div>
+![[images/chapter-12-high-level-design.png]]
 
 - Chat servers facilitate message sending/receiving.
 - Presence servers manage online/offline status.
@@ -111,17 +109,15 @@ Following are the data models for one-to-one chat and group chat.
       - A better approach is to use local sequence number generator. Local means IDs are only unique within a group.
       - The reason why local IDs work is that maintaining message sequence within one-on-one channel or a group channel is sufficient. 
       
-      <img src="./images/one-to-one-chat.png" alt="One to one chat design" width="300">   
-      <img src="./images/group-chat.png" alt="Group chat design" width="300">   
+      ![[images/chapter-12-one-to-one-chat.png]]   
+      ![[images/chapter-12-group-chat.png]]   
 
 
 ## Step 3: Design Deep Dive
 
 ### Service Discovery
 
-<div style="margin-left:3rem">
-   <img src="./images/zookeeper.png" alt="Zookeeper" width="400">   
-</div>
+![[images/chapter-12-zookeeper.png]]
 
 - The primary role of service discovery is to recommend the best chat server for a client based
 on the criteria like geographical location, server capacity. 
@@ -142,9 +138,7 @@ on the criteria like geographical location, server capacity.
 
 #### Group Chat
 
-<div style="margin-left:3rem">
-   <img src="./images/group-chat-flow.png" alt="Group Chat Flow" width="400">  
-</div>
+![[images/chapter-12-group-chat-flow.png]]
 
 - Messages are copied to individual inboxes for each recipient in the group.
 - Simplifies synchronization but becomes expensive for larger groups.
@@ -160,9 +154,7 @@ Each device maintains a variable called cur_max_message_id, which keeps track of
 message ID on the device. Messages that satisfy the following two conditions are considered
 as news messages:
 
-<div style="margin-left:3rem">
-   <img src="./images/message-synchronization.png" alt="Message Synchronization"  width="400">  
-</div>
+![[images/chapter-12-message-synchronization.png]]
 
 - The recipient ID is equal to the currently logged-in user ID.
 - Message ID in the key-value store is larger than cur_max_message_id
@@ -171,9 +163,7 @@ as news messages:
 
 ### Online Presence
 1. **Heartbeat Mechanism:** 
-   <div style="margin-left:3rem">
-      <img src="./images/heartbeat-mechanism.png" alt="Heartbeat Mechanism" width="400"> 
-   </div>
+   ![[images/chapter-12-heartbeat-mechanism.png]]
    
    - Clients send periodic heartbeats to presence servers to indicate they are online. 
    - If no heartbeat is received within a threshold (for eg x = 30), the user is marked offline.
@@ -182,9 +172,7 @@ as news messages:
 
 2. **Fanout Model:** 
 
-   <div style="margin-left:3rem">
-      <img src="./images/fanout-presence.png" alt="Fanout Presence" width="400"> 
-   </div>
+   ![[images/chapter-12-fanout-presence.png]]
 
    - Presence updates are pushed to friends using a publish-subscribe model in which each friend pair maintains a channel.
    - When User A’s online status changes, it publishes the event to three channels, channel A-B, A-C, and A-D. 

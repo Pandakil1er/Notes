@@ -16,9 +16,7 @@ Scaling a system to support millions of users is a complex, iterative journey re
 ## Section 1: Single Server Setup
 Initially, all components (web app, database, cache) run on a single server. 
 
-<div style="margin-left:3rem">
-   <img src="./images/single-server.png" width="400" />
-</div>
+![[images/chapter-01-single-server.png]]
 
 ### Request Flow
 1. Users access the application via domain names (e.g., `api.mysite.com`), resolved to IP addresses using DNS.
@@ -34,9 +32,7 @@ Initially, all components (web app, database, cache) run on a single server.
 ## Section 2: Database Separation
 As the user base grows, the database is moved to a dedicated server to allow independent scaling of web and database tiers.
 
-<div style="margin-left:3rem">
-   <img src="./images/database.png" width="400" />
-</div>
+![[images/chapter-01-database.png]]
 
 ### Database Choices
 
@@ -67,9 +63,7 @@ As the user base grows, the database is moved to a dedicated server to allow ind
 
 ## Section 4: Load Balancer
 
-<div style="margin-left:3rem">
-   <img src="./images/load-balancer.png" width="400" />
-</div>
+![[images/chapter-01-load-balancer.png]]
 
 A **load balancer** distributes traffic among multiple servers. Benefits include:
 1. Redundancy: If a server goes offline, traffic is rerouted.
@@ -81,9 +75,7 @@ A **load balancer** distributes traffic among multiple servers. Benefits include
 
 ## Section 5: Database Replication
 
-<div style="margin-left:3rem">
-   <img src="./images/database-replication.png" width="400" />
-</div>
+![[images/chapter-01-database-replication.png]]
 
 ### Master-Slave Model
 - **Master Database:** Handles write operations.
@@ -112,9 +104,7 @@ recovery scripts (methods like multi-masters and circular replication could help
 ## Section 6: Caching
 A **cache** stores frequently accessed data in memory to reduce database load. The cache tier is a temporary data store layer, much faster than the database. 
 
-<div style="margin-left:3rem">
-   <img src="./images/cache.png" width="500" />
-</div>
+![[images/chapter-01-cache.png]]
 
 ### Caching considerations
 1. **Use case**: Consider using cache when data is read frequently but modified infrequently.
@@ -131,9 +121,7 @@ cache servers across different data centers are recommended to avoid SPOF.
 ## Section 7: Content Delivery Network (CDN)
 A **CDN** improves load times by caching static content (images, CSS, JavaScript) on geographically distributed servers.
 
-<div style="margin-left:3rem">
-   <img src="./images/cdn.png" width="400" />
-</div>
+![[images/chapter-01-cdn.png]]
 
 ### Workflow
 1. User requests content from the nearest CDN server.
@@ -154,18 +142,14 @@ By moving session data to a shared datastore, web servers become stateless. This
 1. Easier horizontal scaling.
 2. Auto-scaling based on traffic.
 
-<div style="margin-left:3rem">
-   <img src="./images/stateless.png" width="400" />
-</div>
+![[images/chapter-01-stateless.png]]
 
 ---
 
 ## Section 9: Multi-Data Center Setup
 Deploying across multiple data centers improves availability and reduces latency. Strategies include:
 
-<div style="margin-left:3rem">
-   <img src="./images/data-center.png" width="400" />
-</div>
+![[images/chapter-01-data-center.png]]
 
 1. **GeoDNS Routing:** Direct users to the nearest data center.
 2. **Data Replication:** Synchronize data across centers to prevent inconsistencies.
@@ -181,9 +165,7 @@ Deploying across multiple data centers improves availability and reduces latency
 A **message queue** is a durable component, stored in memory, that supports asynchronous
 communication. It serves as a buffer and distributes asynchronous requests.
 
-<div style="margin-left:3rem">
-   <img src="./images//message-queue.png" width="500" />
-</div>
+![[./images//message-queue.png]]
 
 - Input services, called producers/publishers, create messages, and publish them to a message queue.
 - Other services called consumers/subscribers, connect to the queue, and perform actions defined by the messages.
@@ -192,9 +174,7 @@ communication. It serves as a buffer and distributes asynchronous requests.
 
 ## Section 11: Logging, Metrics, and Automation
 
-<div style="margin-left:3rem">
-   <img src="./images/logging.png" width="400" />
-</div>
+![[images/chapter-01-logging.png]]
 
 ### Importance
 1. **Logging:** Tracks errors and system health.
@@ -212,9 +192,7 @@ communication. It serves as a buffer and distributes asynchronous requests.
 
 ### Horizontal Scaling (Sharding)
 
-<div style="margin-left:3rem">
-   <img src="./images/horizontal-scaling.png" width="400" />
-</div>
+![[images/chapter-01-horizontal-scaling.png]]
 
 - Divides data across multiple shards using keys (e.g., `user_id`).
    - Sharding separates large databases into smaller, more easily managed parts called shards.

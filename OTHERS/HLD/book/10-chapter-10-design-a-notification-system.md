@@ -43,9 +43,7 @@ The chapter focuses on designing a scalable system capable of sending millions o
    - **Emails:** Commercial email services like SendGrid or Mailchimp.
 
 2. **Contact Info Gathering:**
-   <div style="margin-left:3rem">
-      <img src="./images/contact-info-gathering.png" alt="Contact Info Gathering" width="500">
-   </div>
+   ![[images/chapter-10-contact-info-gathering.png]]
 
    - Collect device tokens, phone numbers, or email addresses during app installation or signup.
    - Store contact info in the database:
@@ -55,9 +53,7 @@ The chapter focuses on designing a scalable system capable of sending millions o
 
 3. **Notification Sending Flow:**
 
-   <div style="margin-left:3rem">
-      <img src="./images/high-level-design.png" alt="High Level Design" width="500">
-   </div>
+   ![[images/chapter-10-high-level-design.png]]
 
    - **Trigger Services:**
       - Generate events to initiate notifications (e.g., billing reminders, shipping updates).
@@ -77,9 +73,7 @@ The chapter focuses on designing a scalable system capable of sending millions o
 
 ### Improved Design
 
-   <div style="margin-left:3rem">
-      <img src="./images/improved-design.png" alt="Improved Design" width="500">
-   </div>
+   ![[images/chapter-10-improved-design.png]]
 
 - Move databases and caches out of the notification server.
 - Introduce **horizontal scaling** with multiple notification servers.
@@ -95,9 +89,7 @@ The chapter focuses on designing a scalable system capable of sending millions o
 
 ### Reliability
 1. **Prevent Data Loss:** 
-   <div style="margin-left:3rem">
-   <img src="./images/data-loss.png" alt="Data Loss" width="400">
-   </div>
+   ![[images/chapter-10-data-loss.png]]
 
    - Persist notification data in a database and implement a retry mechanism. 
    - The Notification log database is included for data persistence.
@@ -110,9 +102,7 @@ If seen before discard it, otherwise send out the notification.
 
 
 ### Additional Components
-   <div style="margin-left:3rem">
-   <img src="./images/events-tracking.png" alt="Events Tracking" width="400">
-   </div>
+   ![[images/chapter-10-events-tracking.png]]
 
 1. **Notification Templates:** Preformatted templates for consistent and efficient notifications.
 2. **Notification Settings:**
@@ -129,9 +119,7 @@ If seen before discard it, otherwise send out the notification.
 
 ### Notification Flow
 
-   <div style="margin-left:3rem">
-   <img src="./images/updated-design.png" alt="Updated Design" width="500">
-   </div>
+   ![[images/chapter-10-updated-design.png]]
 
 1. Trigger services call APIs to send notifications.
 2. Notification servers validate requests and fetch metadata from caches or databases.

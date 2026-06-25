@@ -32,7 +32,7 @@ This chapter discusses the design of a URL shortening service like TinyURL. The 
    - Returns: `longURL` for redirection.
 
     <p align="center">
-    <img src="./images/url-redirection.png" alt="URL Redirection" width="600">
+    ![[images/chapter-08-url-redirection.png]]
     </p>
 
 ### URL Redirection
@@ -42,7 +42,7 @@ subsequent requests for the same URL will not be sent to the URL shortening serv
 
 ### URL Shortening
 <p align="center">
-    <img src="./images/url-shortening.png" alt="URL Shortening" width="400">
+    ![[images/chapter-08-url-shortening.png]]
 </p>
 
 - Use a **hash function** to generate a short URL, mapping long URLs to unique shortened versions.
@@ -61,7 +61,7 @@ Store `<shortURL, longURL>` mappings in a relational database to optimize memory
 - `shortURL`,
 - `longURL`.
 
-    <img src="./images/table-schema.png" alt="Table Schema" width="300">
+    ![[images/chapter-08-table-schema.png]]
 
 ### Hash Function
 #### 1. Base 62 Conversion:
@@ -77,14 +77,14 @@ Convert ID `2009215674938` to Base 62:
 #### 2. Hash + Collision Resolution:
 - Use hash functions like CRC32, MD5, or SHA-1.
 
-    <img src="./images/hash-function.png" alt="Hash Function" width="500">
+    ![[images/chapter-08-hash-function.png]]
 
 - One approach is to collect the first 7 characters of a hash value; however, this method can lead to hash collisions.
 - To resolve collisions,recursively append a new predefined string until no more collision but this can be expensive.
 - Resolve collisions with **Bloom Filters** for efficient lookup.
 
     <p align="center">
-    <img src="./images/url-lookup.png" alt="URL Lookup" width="500">
+    ![[images/chapter-08-url-lookup.png]]
     </p>
 
 ### Comparison
@@ -107,7 +107,7 @@ Convert ID `2009215674938` to Base 62:
 ### URL Shortening Flow
 
 <p align="center">
-    <img src="./images/url-shortening-flow.png" alt="URL Shortening" width="500">
+    ![[images/chapter-08-url-shortening-flow.png]]
 </p>
 
 1. Check if `longURL` exists in the database.
@@ -123,7 +123,7 @@ Convert ID `2009215674938` to Base 62:
 
 ### URL Redirecting Flow
 <p align="center">
-    <img src="./images/url-redirecting-flow.png" alt="URL Shortening" width="600">
+    ![[images/chapter-08-url-redirecting-flow.png]]
 </p>
 
 1. User clicks a `shortURL`.

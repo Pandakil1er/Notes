@@ -52,9 +52,7 @@ A basic setup includes:
 3. **Storage Directory:** Holds files organized by namespaces.
 
 
-<div style="margin-left:3rem">
-    <img src="./images/namespaces.png" alt="Namespaces" width="400" />
-</div>
+![[images/chapter-15-namespaces.png]]
 
 - A web server and a directory called drive/ is set up as the root directory to store uploaded files. 
 - Under drive/ directory, there is a list of directories called namespaces. 
@@ -83,7 +81,7 @@ This design serves as a starting point but is inadequate for scaling.
 1. **Sharding:** Split storage across servers based on `user_id`.
 2. **Amazon S3:** Use S3 for scalable and redundant file storage with cross-region replication.
 
-    <img src="./images/replication.png" alt="Replication" width="600" />
+    ![[images/chapter-15-replication.png]]
      
 3. **Load Balancer:** Distribute traffic across multiple web servers.
 4. **Metadata Database Replication:** Ensure availability through database sharding and replication.
@@ -93,9 +91,7 @@ This design serves as a starting point but is inadequate for scaling.
 For a large storage system like Google Drive, sync conflicts happen from time to time.
 When two users modify the same file or folder at the same time, a conflict happens.
 
-<div style="margin-left:5rem">
-<img src="./images/sync-conflicts.png" alt="Sync Conflicts" width="600" />
-</div>
+![[images/chapter-15-sync-conflicts.png]]
 
 - In the example user 1 and user 2 tries to update the same file at the same time, but user 1’s file is processed by our system first.
 - User 1’s update operation goes through, but, user 2 gets a sync conflict. 
@@ -103,9 +99,7 @@ When two users modify the same file or folder at the same time, a conflict happe
 - User 2 has the option to merge both files or override one version with the other.
 
 ### Improved design
-<div style="margin-left:5rem">
-<img src="./images/high-level-design.png" alt="High Level Design" width="500" />
-</div>
+![[images/chapter-15-high-level-design.png]]
 
 1. **User Interaction:**: Users access the application via browser or mobile app.
 
@@ -146,9 +140,7 @@ A highly simplified is shown below version as it only includes the most importan
 - **Block Table:** Tracks file blocks for reconstructing files.
 - **File Version Table:** Stores file revision history.
 
-<div style="margin-left:5rem">
-<img src="./images/metadata-database.png" alt="Metadata Database " width="500" />
-</div>
+![[images/chapter-15-metadata-database.png]]
 
 ---
 
@@ -165,9 +157,7 @@ A highly simplified is shown below version as it only includes the most importan
    - Notification service informs relevant users.
 
 
-<div style="margin-left:5rem">
-<img src="./images/upload-flow.png" alt="Upload Flow " width="500" />
-</div>
+![[images/chapter-15-upload-flow.png]]
 
 
 ---
@@ -175,18 +165,14 @@ A highly simplified is shown below version as it only includes the most importan
 ### File Sync
 1. **Delta Sync:** Transfer only modified blocks instead of the entire file.
 
-    <div style="margin-left:2rem">
-    <img src="./images/delta-sync.png" alt="Delta Sync" width="400" />
-    </div>
+    ![[images/chapter-15-delta-sync.png]]
 
 2. **Compression:** Blocks are compressed using compression algorithms depending on file types. 
 3. **Conflict Resolution:**
    - First processed version wins.
    - Conflicting versions are saved separately for user resolution.
 
-<div style="margin-left:5rem">
-<img src="./images/file-sync.png" alt="File Synce " width="400" />
-</div>
+![[images/chapter-15-file-sync.png]]
 
 ---
 
@@ -203,9 +189,7 @@ downloads blocks to construct the file.
 3. **Block Download:** Client downloads updated blocks from block servers and reconstructs the file.
 
 
-<div style="margin-left:3rem">
-<img src="./images/download-flow.png" alt="Upload Flow " width="600" />
-</div>
+![[images/chapter-15-download-flow.png]]
 
 
 ---
