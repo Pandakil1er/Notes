@@ -1,7 +1,7 @@
 ---
 title: SOLID principle
 created: 2026-06-20 13:59:53
-modified: "2026-06-26 02:45:53"
+modified: "2026-06-26 03:18:07"
 tags: []
 draft: false
 ---

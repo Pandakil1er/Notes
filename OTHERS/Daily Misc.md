@@ -1,7 +1,7 @@
 ---
 title: "Daily Misc"
 created: "2026-06-26 02:55:21"
-modified: "2026-06-26 02:57:21"
+modified: "2026-06-26 03:20:17"
 tags: []
 draft: false
 ---
@@ -20,35 +20,41 @@ Enables strict mode:
 
 Without this, scripts can silently continue after errors.
 
-```
-VAULT_DIR="${1:-.}"
+### What does `${...}` do?
 
-:- = means if the first argurement is empty then take this
+`${}` is just the full syntax for expanding variables.
+
+These are equivalent:
+
+```
+$1
+${1}
 ```
 
-Gets the first command-line argument.
+But `${}` becomes necessary when using modifiers like `:-`.
+
+---
+
+### Step 3: What does `:-` mean?
+
+Syntax:
+
+```
+${variable:-default}
+```
+
+Meaning:
+
+> If `variable` is unset or empty, use `default`.
 
 Example:
 
 ```
-./obsidian-frontmatter.sh ~/vault
+name="Anshaj"echo "${name:-Unknown}"
 ```
 
-Then:
+Output:
 
 ```
-VAULT_DIR="~/vault"
+Anshaj
 ```
-
-If no argument is provided:
-
-```
-./obsidian-frontmatter.sh
-```
-
-Then:
-
-```
-VAULT_DIR="."
-```
-

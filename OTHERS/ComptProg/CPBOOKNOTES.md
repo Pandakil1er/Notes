@@ -1,6 +1,6 @@
 ---
 annotation-target: ComptProg/newbookc.pdf
-modified: "2026-06-26 02:45:41"
+modified: "2026-06-26 03:18:07"
 ---
 
 >%%
