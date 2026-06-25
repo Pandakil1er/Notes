@@ -1,3 +1,11 @@
+---
+title: "Views"
+created: "2024-11-13 04:24:27"
+modified: "2024-11-13 04:24:31"
+tags: []
+draft: false
+---
+
 Here's a comprehensive breakdown of the "Views" lesson on The Odin Project:
 
 ### 1. **Introduction to Views and Template Engines**  

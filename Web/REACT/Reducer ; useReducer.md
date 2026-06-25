@@ -1,3 +1,11 @@
+---
+title: "Reducer ; useReducer"
+created: "2024-08-12 00:17:53"
+modified: "2024-08-12 00:17:53"
+tags: []
+draft: false
+---
+
 
 ## Reducer
 Managing state with reducers is slightly different from directly setting state. Instead of telling React “what to do” by setting state, you specify “what the user just did” by dispatching “actions” from your event handlers. (The state update logic will live elsewhere!) So instead of “setting `tasks`” via an event handler, you’re dispatching an “added/changed/deleted a task” action. This is more descriptive of the user’s intent.

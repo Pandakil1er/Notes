@@ -1,3 +1,11 @@
+---
+title: "CSS RESET"
+created: "2024-08-12 00:17:53"
+modified: "2024-08-12 00:17:53"
+tags: []
+draft: false
+---
+
 /*
 
   1. Use a more-intuitive box-sizing model.

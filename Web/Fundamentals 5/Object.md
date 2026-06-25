@@ -1,3 +1,11 @@
+---
+title: "Object"
+created: "2024-08-12 00:17:53"
+modified: "2024-08-12 00:17:53"
+tags: []
+draft: false
+---
+
 let user = new Object(); // "object constructor" syntax 
 let user = {}; // "object literal" syntax
 

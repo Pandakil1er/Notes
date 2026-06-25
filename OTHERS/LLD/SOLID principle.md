@@ -1,3 +1,11 @@
+---
+title: SOLID principle
+created: 2026-06-20 13:59:53
+modified: 2026-06-26 02:21:35
+tags: []
+draft: false
+---
+
 Here are comprehensive notes based on Katerina Trajchevska's talk, "Becoming a better developer by using the SOLID design principles."
 
 The core goal of the SOLID principles is to write code that is **easier to maintain, easier to extend, and easier to understand** [[06:09](https://www.youtube.com/watch?v=rtmFCcjEgEw&t=369)]. By investing a bit more time structuring the code upfront, developers spend drastically less time trying to read and untangle it later.

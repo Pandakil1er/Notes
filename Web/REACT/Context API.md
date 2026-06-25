@@ -1,3 +1,11 @@
+---
+title: "Context API"
+created: "2024-08-12 00:17:53"
+modified: "2024-08-12 00:17:53"
+tags: []
+draft: false
+---
+
 To simplify our application and reduce complexity, we can implement the Context API. There are three key elements in this API that we need to understand:
 
 1. `createContext` - This “creates the context” Duh… But yes, it’s how we can create the context. It takes in any value, be it a number, string, or object, which can be referred to as the _default value_ of the context, and returns a context object that can be used to pass down data to components

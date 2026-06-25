@@ -1,3 +1,11 @@
+---
+title: "Callback,async,promises"
+created: "2024-08-12 00:17:53"
+modified: "2024-08-12 00:17:53"
+tags: []
+draft: false
+---
+
 
 A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
 

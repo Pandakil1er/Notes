@@ -1,3 +1,11 @@
+---
+title: "controller"
+created: "2024-10-05 12:00:19"
+modified: "2024-11-13 03:35:18"
+tags: []
+draft: false
+---
+
 1. No argument `next()` - Will pass control to the next middleware function. Very simple and straightforward.
 2. With an error argument `next(new Error(...))` - Will pass control directly to the error middleware function.
 3. With the string `next('route')` - Will pass control to the next route handler with the same matching path (if there is one). This only works for `app.METHOD` or `router.METHOD`. Potentially, it can also be the same as just calling `next` with no argument.

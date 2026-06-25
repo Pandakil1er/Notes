@@ -1,3 +1,11 @@
+---
+title: "Routes"
+created: "2024-10-04 18:04:00"
+modified: "2024-11-13 03:58:32"
+tags: []
+draft: false
+---
+
 The first argument we pass a route is the path to match, which can either be a string or a regular expression. `/messages` matches that exactly, while `/message/all` only matches if the path is `/messages/all` (not `/messages`, nor `/messages/new`).
 
 With string paths, we can also use certain symbols like `?`, `+`, `*` and `()` to provide some pattern-matching functionality, similar to regular expressions. For example:

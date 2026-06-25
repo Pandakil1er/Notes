@@ -1,3 +1,11 @@
+---
+title: "Readme"
+created: "2026-03-14 05:50:50"
+modified: "2025-02-23 10:39:12"
+tags: []
+draft: false
+---
+
 # Chapter 14: Design YouTube
 
 ## Introduction

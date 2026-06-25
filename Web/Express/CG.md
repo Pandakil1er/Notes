@@ -1,3 +1,11 @@
+---
+title: "CG"
+created: "2024-11-26 06:41:47"
+modified: "2024-11-26 06:41:55"
+tags: []
+draft: false
+---
+
 Here is a markdown checklist based on the content of your provided sources:
 
 ### Computer Graphics Concepts Checklist

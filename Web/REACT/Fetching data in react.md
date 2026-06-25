@@ -1,3 +1,11 @@
+---
+title: "Fetching data in react"
+created: "2024-08-12 00:17:53"
+modified: "2024-08-12 00:17:53"
+tags: []
+draft: false
+---
+
 
 
 https://www.theodinproject.com/lessons/node-path-react-new-fetching-data-in-react

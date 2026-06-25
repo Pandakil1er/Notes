@@ -1,3 +1,11 @@
+---
+title: "Grid"
+created: "2024-08-12 00:17:53"
+modified: "2024-08-12 00:17:53"
+tags: []
+draft: false
+---
+
 https://css-tricks.com/snippets/css/complete-guide-grid/#grid-properties
 
 flex : grow,shrink,basis

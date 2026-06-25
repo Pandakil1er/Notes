@@ -1,3 +1,11 @@
+---
+title: "react router"
+created: "2024-08-12 00:17:53"
+modified: "2024-08-12 00:17:53"
+tags: []
+draft: false
+---
+
 
 History api
 https://developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API

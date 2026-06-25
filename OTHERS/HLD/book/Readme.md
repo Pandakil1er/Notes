@@ -1,3 +1,11 @@
+---
+title: "Readme"
+created: "2026-03-14 05:50:50"
+modified: "2025-02-23 10:39:12"
+tags: []
+draft: false
+---
+
 
 # [System Design Interview - An Insider's Guide (Vol 1)](https://bytebytego.com/courses/system-design-interview)
 These notes are based on the System Design Interview books - [Vol 1 2nd Ed](https://www.goodreads.com/book/show/54109255-system-design-interview-an-insider-s-guide) 

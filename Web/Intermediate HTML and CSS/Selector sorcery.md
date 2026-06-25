@@ -1,3 +1,11 @@
+---
+title: "Selector sorcery"
+created: "2024-08-12 00:17:53"
+modified: "2024-08-12 00:17:53"
+tags: []
+draft: false
+---
+
 div p - all p that have a ancestor of div;
 -   `>` - the child combinator
 -   `+` - the adjacent sibling combinator

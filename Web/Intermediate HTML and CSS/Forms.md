@@ -1,3 +1,11 @@
+---
+title: "Forms"
+created: "2024-08-12 00:17:53"
+modified: "2024-08-12 00:17:53"
+tags: []
+draft: false
+---
+
 action and method
 action to know where to send data
 method to know which http request method use to submitt the form

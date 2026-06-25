@@ -1,3 +1,11 @@
+---
+title: "System Design Interviews guide"
+created: "2026-02-19 06:52:24"
+modified: "2026-03-12 06:25:13"
+tags: []
+draft: false
+---
+
 # Chapter 1: Scale from Zero to Millions of Users
 
 [](https://github.com/liquidslr/system-design-notes/tree/main/01.%20Scaling#chapter-1-scale-from-zero-to-millions-of-users)

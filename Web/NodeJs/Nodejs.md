@@ -1,3 +1,11 @@
+---
+title: "Nodejs"
+created: "2024-08-12 00:17:53"
+modified: "2024-08-12 00:17:53"
+tags: []
+draft: false
+---
+
  “As an asynchronous event driven JavaScript runtime, Node is designed to build scalable network applications.”
 
 

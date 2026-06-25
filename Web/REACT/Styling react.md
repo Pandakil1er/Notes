@@ -1,3 +1,11 @@
+---
+title: "Styling react"
+created: "2024-08-12 00:17:53"
+modified: "2024-08-12 00:17:53"
+tags: []
+draft: false
+---
+
 Vanilla CSS
 - css modules
 - tailwind like frameworks that give classes
