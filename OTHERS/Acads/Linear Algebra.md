@@ -1,9 +1,9 @@
 ---
-title: "Linear Algebra"
-created: "2024-09-22 08:15:52"
-modified: "2024-09-22 12:17:02"
+title: Linear Algebra
+created: 2024-09-22 08:15:52
+modified: 2024-09-22 12:17:02
 tags: []
-draft: false
+draft: true
 ---
 
 linear combination
