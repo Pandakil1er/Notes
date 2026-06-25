@@ -87,3 +87,16 @@ EOF
     echo "Added frontmatter: $file"
   fi
 done
+
+# Only commit if something changed
+if ! git diff --quiet || ! git diff --cached --quiet; then
+  git add .
+
+  git commit -m "Vault update: $(date '+%Y-%m-%d %H:%M:%S')"
+
+  git push
+
+  echo "Changes pushed to GitHub."
+else
+  echo "No changes to commit."
+fi
