@@ -1,7 +1,7 @@
 ---
 title: "Chapter 1 Scale From Zero To Millions Of Users"
 created: "2026-03-14 05:50:50"
-modified: "2026-06-26 04:34:06"
+modified: "2026-06-26 04:37:36"
 tags: []
 draft: false
 ---
@@ -165,7 +165,7 @@ Deploying across multiple data centers improves availability and reduces latency
 A **message queue** is a durable component, stored in memory, that supports asynchronous
 communication. It serves as a buffer and distributes asynchronous requests.
 
-![[./images//message-queue.png]]
+![[chapter-01-message-queue.png]]
 
 - Input services, called producers/publishers, create messages, and publish them to a message queue.
 - Other services called consumers/subscribers, connect to the queue, and perform actions defined by the messages.
