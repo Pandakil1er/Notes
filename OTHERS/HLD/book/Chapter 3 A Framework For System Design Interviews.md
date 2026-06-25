@@ -1,5 +1,5 @@
 ---
-title: "Readme"
+title: "Chapter 3 A Framework For System Design Interviews"
 created: "2026-03-14 05:50:50"
 modified: "2026-06-26 03:46:12"
 tags: []

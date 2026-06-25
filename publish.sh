@@ -8,7 +8,7 @@ find "$VAULT_DIR" -type f -name "*.md" | while read -r file; do
 
   filename="$(basename "$file" .md)"
 
-  # Save original mtime (epoch seconds)
+  # Save original modification time (epoch seconds)
   old_mtime=$(stat -c %Y "$file")
 
   modified=$(date -d "@$old_mtime" "+%Y-%m-%d %H:%M:%S")
@@ -20,42 +20,55 @@ find "$VAULT_DIR" -type f -name "*.md" | while read -r file; do
 
   if [[ "$first_nonempty" == "---" ]]; then
 
-    awk -v modified="$modified" '
-        BEGIN {
-            in_yaml=0
-            modified_found=0
+    # Update existing frontmatter
+    awk -v modified="$modified" -v title="$filename" '
+      BEGIN {
+        in_yaml = 0
+        modified_found = 0
+        title_found = 0
+      }
+
+      NR == 1 && $0 == "---" {
+        in_yaml = 1
+        print
+        next
+      }
+
+      in_yaml && $0 == "---" {
+        if (!title_found)
+          print "title: \"" title "\""
+
+        if (!modified_found)
+          print "modified: \"" modified "\""
+
+        print
+        in_yaml = 0
+        next
+      }
+
+      in_yaml {
+        if ($0 ~ /^title:[[:space:]]*/) {
+          print "title: \"" title "\""
+          title_found = 1
         }
-
-        NR==1 && $0=="---" {
-            in_yaml=1
-            print
-            next
+        else if ($0 ~ /^modified:[[:space:]]*/) {
+          print "modified: \"" modified "\""
+          modified_found = 1
         }
-
-        in_yaml && $0=="---" {
-            if (!modified_found)
-                print "modified: \"" modified "\""
-
-            print
-            in_yaml=0
-            next
+        else {
+          print
         }
+        next
+      }
 
-        in_yaml {
-            if ($0 ~ /^modified:[[:space:]]*/) {
-                print "modified: \"" modified "\""
-                modified_found=1
-            } else {
-                print
-            }
-            next
-        }
-
-        { print }
-        ' "$file" >"$tmp"
+      {
+        print
+      }
+    ' "$file" >"$tmp"
 
   else
 
+    # Get creation time if available
     created=$(stat -c '%w' "$file" 2>/dev/null || echo "-")
 
     if [[ "$created" == "-" || "$created" == "1970-01-01"* ]]; then
@@ -79,9 +92,9 @@ EOF
 
   fi
 
-  #############################################
-  # Only replace file if content actually changed
-  #############################################
+  ###########################################################
+  # Replace file only if content actually changed
+  ###########################################################
 
   if cmp -s "$file" "$tmp"; then
     rm "$tmp"
@@ -96,9 +109,9 @@ EOF
 
 done
 
-#############################################
+###########################################################
 # Git
-#############################################
+###########################################################
 
 git add .
 

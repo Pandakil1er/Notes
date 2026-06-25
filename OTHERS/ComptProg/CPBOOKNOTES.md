@@ -1,6 +1,7 @@
 ---
 annotation-target: ComptProg/newbookc.pdf
 modified: "2026-06-26 03:21:10"
+title: "CPBOOKNOTES"
 ---
 
 >%%

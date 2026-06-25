@@ -1,5 +1,5 @@
 ---
-title: Linear Algebra
+title: "Linear Algebra"
 created: 2024-09-22 08:15:52
 modified: "2026-06-26 03:21:10"
 tags: []
