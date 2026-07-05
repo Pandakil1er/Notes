@@ -1,7 +1,7 @@
 ---
 title: "Design Pattern Snippets"
 created: "2026-06-20 13:54:25"
-modified: "2026-07-06 01:23:30"
+modified: "2026-07-06 01:51:45"
 tags: []
 draft: false
 ---
@@ -138,5 +138,5 @@ While it may seem like a contradiction,  there are techniques for allowing code 
 ![[Pasted image 20260706012255.png]]
 **The Factory Method Pattern** defines an interface  for creating an object, but lets subclasses decide which  class to instantiate. Factory Method lets a class defer  instantiation to subclasses.
 ![[Pasted image 20260706012328.png]]
-
-
+**Design Principle** : Depend upon abstractions. Do  not depend upon concrete classes.  (**Dependecy Inversion Principle**)
+![[Pasted image 20260706015143.png]]

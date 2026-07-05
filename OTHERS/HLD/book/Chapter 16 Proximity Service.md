@@ -1,9 +1,9 @@
 ---
 title: "Chapter 16 Proximity Service"
-created: "2026-03-14 05:50:50"
-modified: "2026-06-26 04:33:26"
+created: 2026-03-14 05:50:50
+modified: "2026-07-06 01:33:16"
 tags: []
-draft: false
+draft: true
 ---
 
 # Chapter 16: Proximity Service
