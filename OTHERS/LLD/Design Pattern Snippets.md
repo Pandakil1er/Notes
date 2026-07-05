@@ -1,11 +1,11 @@
 ---
 title: "Design Pattern Snippets"
 created: "2026-06-20 13:54:25"
-modified: "2026-07-06 01:14:27"
+modified: "2026-07-06 01:17:16"
 tags: []
 draft: false
 ---
-# Strategy Ptern
+# Strategy Pattern
 **Design Principle** : Identify the aspects of your  application that vary and separate  them from what stays the same.  
 **Design Principle** : Program to an interface, not an  implementation.
 
@@ -134,5 +134,5 @@ While it may seem like a contradiction,  there are techniques for allowing code 
 ![[Pasted image 20260627161222.png]]
 
 # Factory Pattern
-**The Factory Method Pattern** defines an interface  for creating an object, but lets subclasses decide which  class to instantiate. Factory Method lets a class defer  instantiation to subclasses. 
+**The Factory Method Pattern** defines an interface  for creating an object, but lets subclasses decide which  class to instantiate. Factory Method lets a class defer  instantiation to subclasseses.
 
