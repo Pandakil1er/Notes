@@ -1,7 +1,7 @@
 ---
 title: "Design Pattern Snippets"
 created: "2026-06-20 13:54:25"
-modified: "2026-07-06 01:51:45"
+modified: "2026-07-06 02:28:26"
 tags: []
 draft: false
 ---
@@ -140,3 +140,5 @@ While it may seem like a contradiction,  there are techniques for allowing code 
 ![[Pasted image 20260706012328.png]]
 **Design Principle** : Depend upon abstractions. Do  not depend upon concrete classes.  (**Dependecy Inversion Principle**)
 ![[Pasted image 20260706015143.png]]
+**The Abstract Factory Pattern** provides an interface  for creating families of related or dependent objects  without specifying their concrete classes. 
+![[Pasted image 20260706022823.png]]
