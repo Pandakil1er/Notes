@@ -1,9 +1,9 @@
 ---
 title: "System Design Interviews guide"
-created: "2026-02-19 06:52:24"
-modified: "2026-06-26 04:33:26"
+created: 2026-02-19 06:52:24
+modified: "2026-07-06 02:13:14"
 tags: []
-draft: false
+draft: true
 ---
 
 # Chapter 1: Scale from Zero to Millions of Users
