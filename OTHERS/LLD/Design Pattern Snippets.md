@@ -1,11 +1,11 @@
 ---
 title: "Design Pattern Snippets"
 created: "2026-06-20 13:54:25"
-modified: "2026-07-06 01:03:03"
+modified: "2026-07-06 01:14:27"
 tags: []
 draft: false
 ---
-# Strategy Pattern
+# Strategy Ptern
 **Design Principle** : Identify the aspects of your  application that vary and separate  them from what stays the same.  
 **Design Principle** : Program to an interface, not an  implementation.
 
