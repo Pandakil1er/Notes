@@ -1,7 +1,7 @@
 ---
 title: "Daily Misc"
 created: 2026-06-26 02:55:21
-modified: "2026-07-06 01:44:21"
+modified: "2026-07-09 02:39:19"
 tags: []
 draft: false
 ---
@@ -447,3 +447,105 @@ Instead of taking 1,000,000 sequential loops in a `for` loop, the GPU collapses 
 
 This is the magic of monoids and associative math. By ensuring that any two adjacent chunks can be merged without needing to know the context of the rest of the string, you unlock a divide-and-conquer architecture that allows every available hardware core to work at the same time.
 
+
+# july 07
+
+## L4 Load Balancer
+
+### **1. The Foundational Context: The OSI Model**
+
+To truly understand an L4 Load Balancer, we must first look at the **OSI (Open Systems Interconnection) Model**, which is a conceptual framework that standardizes the functions of a telecommunication or computing system into 7 distinct layers.
+
+- **Layer 7 (Application Layer):** This is where HTTP, HTTPS, WebSockets, and SSH live. It contains the actual "payload" (the data the user cares about, like a JSON payload, URL path, or HTTP headers).
+    
+- **Layer 4 (Transport Layer):** This is where TCP (Transmission Control Protocol) and UDP (User Datagram Protocol) live.
+    
+    - **The Crucial Distinction:** A Layer 4 load balancer operates **strictly at this layer**. It does not possess the capability to decrypt or look inside the Layer 7 data. It is completely blind to whether the user is requesting `/api/users` or `/api/payments`. It only knows: _"A packet came from IP Address A (Port X) and wants to go to IP Address B (Port 80)."_
+        
+
+### **2. Deep Dive: Layer 4 Load Balancing**
+
+Because an L4 load balancer only looks at the IP address and Port numbers, its routing decisions are purely mathematical and network-based. It relies on a "5-tuple" to track connections:
+
+1. Source IP Address
+    
+2. Source Port
+    
+3. Destination IP Address
+    
+4. Destination Port
+    
+5. Protocol (TCP or UDP)
+    
+
+**Why use L4 if it's blind to data?**
+
+Because it doesn't spend CPU cycles inspecting payloads, L4 load balancing is incredibly fast, highly efficient, and uses very little compute power.
+
+### **3. The Two Modes of L4 Load Balancing**
+
+The video highlights two distinct architectures for how an L4 load balancer handles traffic: **Pass-Through Mode** and **Proxy Mode**.
+
+#### **Architecture A: Pass-Through Mode (Packet Forwarding)**
+
+In this mode, the load balancer acts like a high-speed router. It does not "terminate" or stop the connection. It simply alters the network packets on the fly and shoves them forward.
+
+- **The TCP Connection:** There is only **one** TCP handshake. The client initiates a TCP handshake that goes _through_ the load balancer and completes directly with the chosen backend server.
+    
+- **How it works (Step-by-Step):**
+    
+    1. Client sends a packet to the Load Balancer's IP (e.g., `192.168.1.100`).
+        
+    2. The Load Balancer uses a fast algorithm (like Hashing the Source IP or simply picking Randomly) to select a backend server (e.g., `Server A: 192.168.1.101`).
+        
+    3. The Load Balancer modifies the Destination MAC address of the packet and passes it to Server A.
+        
+    4. **Masquerading (NAT):** When Server A replies, the response must go back through the Load Balancer so it can rewrite the Source IP back to its own. If it didn't do this, the client would receive a packet from an unknown IP (`192.168.1.101`) and drop it, since it expects a reply from `192.168.1.100`.
+        
+- **Tools Used:** Linux `iptables` or `nftables`.
+    
+- **Pros:** Extremely low latency; handles massive throughput.
+    
+- **Cons:** Very rigid. You cannot do smart routing based on server load because the load balancer isn't managing the connections, it's just passing packets.
+    
+
+#### **Architecture B: Proxy Mode (Connection Termination)**
+
+In this mode, the load balancer acts as a true "middleman." It actively intercepts the connection, fully manages it, and creates a separate connection to the backend.
+
+- **The TCP Connection:** There are **two** distinct TCP connections.
+    
+    - _Connection 1:_ Client ↔ Load Balancer
+        
+    - _Connection 2:_ Load Balancer ↔ Backend Server
+        
+- **How it works (Step-by-Step):**
+    
+    1. Client initiates a TCP handshake. The Load Balancer accepts it and completes the handshake itself.
+        
+    2. The Load Balancer looks at its pool of backend servers. Because it holds the connection, it has time to think.
+        
+    3. It evaluates metrics: _"Which server has the fewest active TCP connections? Which server is currently healthy?"_
+        
+    4. It selects Server B, opens a _new_ TCP connection to Server B, and streams the raw bytes from the client into this new connection.
+        
+- **Tools Used:** HAProxy (in TCP mode), NGINX (in Stream mode), Envoy.
+    
+- **Pros:** * **Smarter Routing:** Can use algorithms like "Least Connections" or "Weighted Round Robin".
+    
+    - **Health Checks:** The load balancer can actively ping backend servers to ensure they are alive before sending traffic.
+        
+    - **Observability:** You get metrics on TCP connection drops, latency, and retries.
+        
+- **Cons:** Slightly higher latency and CPU usage than Pass-Through mode because the load balancer has to manage two TCP states in memory per user.
+    
+
+### **4. Summary Comparison Table**
+
+|**Feature**|**Pass-Through Mode**|**Proxy Mode**|
+|---|---|---|
+|**TCP Connections**|1 (Client directly to Backend)|2 (Client to LB, LB to Backend)|
+|**Routing Logic**|Primitive (Random, IP Hash)|Advanced (Least Connections, Health Checks)|
+|**Performance**|Maximum throughput, lowest latency|High throughput, slight latency overhead|
+|**Load Balancer Role**|Network Router / Packet Forwarder|Active Middleman / Connection Manager|
+|**Example Tech**|Linux `iptables`, AWS NLB (some modes)|HAProxy, NGINX (Stream), Envoy|
