@@ -1,7 +1,7 @@
 ---
 title: "Daily Misc"
 created: 2026-06-26 02:55:21
-modified: "2026-07-09 02:39:19"
+modified: "2026-07-10 23:51:33"
 tags: []
 draft: false
 ---
@@ -549,3 +549,79 @@ In this mode, the load balancer acts as a true "middleman." It actively intercep
 |**Performance**|Maximum throughput, lowest latency|High throughput, slight latency overhead|
 |**Load Balancer Role**|Network Router / Packet Forwarder|Active Middleman / Connection Manager|
 |**Example Tech**|Linux `iptables`, AWS NLB (some modes)|HAProxy, NGINX (Stream), Envoy|
+
+# July 10
+## Browser Fingerprinting
+
+> **Browser fingerprinting** is a tracking technique that collects unique technical details about your browser and device to create a digital "fingerprint." 
+> 
+> *Unlike cookies, it works silently in the background, cannot be cleared by deleting your history, and continues tracking you even in incognito mode.*
+
+### How Browser Fingerprinting Works
+
+When you visit a website, your browser automatically shares certain parameters so the page displays correctly. Tracking scripts gather dozens of these signals and combine them into a unique identifier. 
+
+While millions of people might share one trait (like using Windows), the exact combination of all your settings is mathematically unique to you. The result is converted into a single hash — a tracking ID that follows you across sites.
+
+**Examples of Visible System Signals:**
+- IP Address
+- Browser (e.g., Chrome 149)
+- Operating System (e.g., Linux)
+- Screen Resolution (e.g., 1920×1080)
+- Cookies (Enabled/Disabled)
+- Language (e.g., en-US)
+- Pixel Ratio (e.g., 1x)
+
+---
+
+### Common Fingerprinting Techniques
+
+- **Canvas fingerprinting:** A script instructs your browser to draw a hidden image (text, shapes, color gradients) that is never shown on screen. Because every combination of GPU, graphics driver, and OS renders the image with tiny differences, the resulting pixels form a stable identifier.
+- **WebGL & WebGPU probing:** Scripts request a small 3D scene, measure how your hardware completes the rendering task, and read vendor strings directly from the API to reveal specific GPU models and drivers.
+- **Font & plugin enumeration:** Scripts test which fonts are installed on your system by measuring how text renders in each one, and probe for browser extensions. 
+- **Audio fingerprinting:** The Web Audio API lets a script generate and process a sound signal in the background. Small differences in audio hardware and software processing produce measurably different output from the same input.
+- **Media & device APIs:** Browsers expose information about connected monitors, supported audio/video codecs, and battery status. 
+
+---
+
+### Why Websites Use Fingerprinting
+
+Fingerprinting is a neutral technique. What varies is who is using it and why:
+
+1. **Advertising and Profiling:** Ad tech companies build behavioral profiles (pages read, products viewed) across unrelated websites to target ads without any visible indication.
+2. **Fraud & Bot Prevention:** Banks and security platforms use it to flag suspicious login attempts from unrecognized devices and to distinguish real visitors from bots.
+3. **Preventing Abuse:** Streaming services use it to detect account sharing, and online games use it to re-identify banned cheaters who create fresh accounts.
+
+---
+
+### How to Protect Yourself
+
+Because fingerprinting targets inherent device characteristics rather than stored data, it is harder to stop than cookies. You can only change what your browser reveals, or make it blend in with others.
+
+#### Browser Options
+- **Brave Browser:** Randomizes canvas, WebGL, audio, and font fingerprinting signals on every session. *(Best mainstream option; on by default).*
+- **Firefox:** Go to `about:config` and toggle `privacy.resistFingerprinting` to `true`. Firefox will report standardized values for signals. *(May occasionally break sites).*
+- **Tor Browser & Mullvad Browser:** Standardizes everything so every user looks identical. *(Strongest approach for high-sensitivity use, but trades off speed).*
+
+#### Best Practices
+- **Minimize extensions:** Paradoxically, installing many privacy extensions makes your fingerprint *more* unique because the unusual combination becomes an identifier itself. A stock browser configuration blends in better.
+- **VPNs do not stop fingerprinting:** A VPN changes your IP address, but your canvas rendering, fonts, GPU details, and everything else stay exactly the same. 
+
+---
+
+### FAQ
+
+**Can browser fingerprinting track me in incognito mode?**
+Yes. Incognito mode only prevents local history storage. Your browser still exposes the exact same technical signals.
+
+**Does a VPN prevent browser fingerprinting?**
+No. A VPN protects your IP address, but does not affect your browser fingerprint.
+
+**What is the difference between cookies and browser fingerprinting?**
+Cookies are stored on your device and can be deleted. Browser fingerprinting reads your device's existing technical characteristics and exists as long as your device and browser settings remain the same.
+
+**Is browser fingerprinting legal?**
+In most jurisdictions, yes. The EU's ePrivacy Directive requires consent for fingerprinting, but enforcement has been inconsistent.
+
+---
+*Resource:* [MySysInfo.com](https://mysysinfo.com) (Check what your browser reveals)

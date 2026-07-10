@@ -1,7 +1,7 @@
 ---
 title: "Design Pattern Snippets"
 created: "2026-06-20 13:54:25"
-modified: "2026-07-06 02:28:26"
+modified: "2026-07-11 01:12:06"
 tags: []
 draft: false
 ---
@@ -142,3 +142,12 @@ While it may seem like a contradiction,  there are techniques for allowing code 
 ![[Pasted image 20260706015143.png]]
 **The Abstract Factory Pattern** provides an interface  for creating families of related or dependent objects  without specifying their concrete classes. 
 ![[Pasted image 20260706022823.png]]
+
+# Singleton Pattern
+**The Singleton Pattern** ensures a class has only one  instance, and provides a global point of access to it. 
+
+**Singleton can be also easily created using enum in java**
+
+For MultiThreading the getInstance() method shoul be `public static synchronised` or lazily create the instance. by `public static Class instance = new Class();` or  use double checked locking
+![[Pasted image 20260711001433.png]]
+![[Pasted image 20260711001455.png]]
